@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<produits>
+    <produit>
+        <id>0</id>
+        <titre>Titre 1</titre>
+        <description>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto veritatis eligendi error atque perferendis ex corporis amet nostrum deserunt quisquam. Pariatur, soluta tempora! At magni sapiente itaque nisi nemo nulla?</description>
+        <image>chemain de l'image</image>
+        <prix>25</prix>
+    </produit>
+        <produit>
+        <id>1</id>
+        <titre>Titre 2</titre>
+        <description>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto veritatis eligendi error atque perferendis ex corporis amet nostrum deserunt quisquam. Pariatur, soluta tempora! At magni sapiente itaque nisi nemo nulla?</description>
+        <image>chemain de l'image</image>
+        <prix>25</prix>
+    </produit>
+        <produit>
+        <id>2</id>
+        <titre>Titre 3</titre>
+        <description>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto veritatis eligendi error atque perferendis ex corporis amet nostrum deserunt quisquam. Pariatur, soluta tempora! At magni sapiente itaque nisi nemo nulla?</description>
+        <image>chemain de l'image</image>
+        <prix>25</prix>
+    </produit>
+        <produit>
+        <id>3</id>
+        <titre>Titre 4</titre>
+        <description>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto veritatis eligendi error atque perferendis ex corporis amet nostrum deserunt quisquam. Pariatur, soluta tempora! At magni sapiente itaque nisi nemo nulla?</description>
+        <image>chemain de l'image</image>
+        <prix>25</prix>
+    </produit>
+        <produit>
+        <id>4</id>
+        <titre>Titre 5</titre>
+        <description>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto veritatis eligendi error atque perferendis ex corporis amet nostrum deserunt quisquam. Pariatur, soluta tempora! At magni sapiente itaque nisi nemo nulla?</description>
+        <image>chemain de l'image</image>
+        <prix>25</prix>
+    </produit>
+        <produit>
+        <id>5</id>
+        <titre>Titre 6</titre>
+        <description>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto veritatis eligendi error atque perferendis ex corporis amet nostrum deserunt quisquam. Pariatur, soluta tempora! At magni sapiente itaque nisi nemo nulla?</description>
+        <image>chemain de l'image</image>
+        <prix>25</prix>
+    </produit>
+        <produit>
+        <id>6</id>
+        <titre>Titre 7</titre>
+        <description>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto veritatis eligendi error atque perferendis ex corporis amet nostrum deserunt quisquam. Pariatur, soluta tempora! At magni sapiente itaque nisi nemo nulla?</description>
+        <image>chemain de l'image</image>
+        <prix>25</prix>
+    </produit>
+        <produit>
+        <id>7</id>
+        <titre>Titre 8</titre>
+        <description>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto veritatis eligendi error atque perferendis ex corporis amet nostrum deserunt quisquam. Pariatur, soluta tempora! At magni sapiente itaque nisi nemo nulla?</description>
+        <image>chemain de l'image</image>
+        <prix>25</prix>
+    </produit>    <produit>
+        <id>8</id>
+        <titre>Titre 9</titre>
+        <description>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto veritatis eligendi error atque perferendis ex corporis amet nostrum deserunt quisquam. Pariatur, soluta tempora! At magni sapiente itaque nisi nemo nulla?</description>
+        <image>chemain de l'image</image>
+        <prix>25</prix>
+    </produit>    <produit>
+        <id>9</id>
+        <titre>Titre 10</titre>
+        <description>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto veritatis eligendi error atque perferendis ex corporis amet nostrum deserunt quisquam. Pariatur, soluta tempora! At magni sapiente itaque nisi nemo nulla?</description>
+        <image>chemain de l'image</image>
+        <prix>25</prix>
+    </produit>
+</produits>
