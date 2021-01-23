@@ -4,10 +4,10 @@ Les données seront transitées par des services WEB et ils proviendront d'une b
 
 ## DEFFINITION D'UNE DONNEE
 
-Une donnée "produit" comportera :
+Une donnée ***"produit"*** comportera :
 
-- id
-- titre
-- description
-- prix
-- image
+- **id** type : ***serial***
+- **titre** type : ***varChar 50***
+- **description** type : ***Text***
+- **prix** type : ***Real***
+- **image** type : ***varChar 200***
