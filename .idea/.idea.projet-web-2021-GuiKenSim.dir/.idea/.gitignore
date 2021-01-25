@@ -1,0 +1,13 @@
+﻿# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/contentModel.xml
+/modules.xml
+/projectSettingsUpdater.xml
+/.idea.projet-web-2021-GuiKenSim.iml
+# Datasource local storage ignored files
+/../../../../../../../../:\Users\simon\git\projet-web-2021-GuiKenSim\.idea\.idea.projet-web-2021-GuiKenSim.dir\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
