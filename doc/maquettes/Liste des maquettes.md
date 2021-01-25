@@ -4,10 +4,18 @@
 ## Maquette À propos :
 ![](https://github.com/cegepmatane/projet-web-2021-GuiKenSim/blob/master/doc/maquettes/images/A_propos.png)
 ### Version éditable :
-- Maquettes liste des données + détail des données : https://balsamiq.cloud/snlsapa/p7u27ps
+- Maquettes liste des données + détail des données : https://balsamiq.cloud/sx9cj8d/pagdbuf
 ## Maquette Liste des données :
 ![](https://github.com/cegepmatane/projet-web-2021-GuiKenSim/blob/master/doc/maquettes/images/liste_donnees.PNG)
 ## Maquette Détail des données :
 ![](https://github.com/cegepmatane/projet-web-2021-GuiKenSim/blob/master/doc/maquettes/images/details_donnees.PNG)
 ### Version éditable :
-- Maquettes Accueil + À propos : https://balsamiq.cloud/sx9cj8d/pagdbuf
+- Maquettes Accueil + À propos :  https://balsamiq.cloud/snlsapa/p7u27ps
+
+# Liste Maquettes Administration
+## Maquette Administration : 
+![](https://github.com/cegepmatane/projet-web-2021-GuiKenSim/blob/master/doc/maquettes/images/administration.png)
+## Maquette Ajouter : 
+![](https://github.com/cegepmatane/projet-web-2021-GuiKenSim/blob/master/doc/maquettes/images/ajouter_produit.png)
+## Maquette Modifier : 
+![](https://github.com/cegepmatane/projet-web-2021-GuiKenSim/blob/master/doc/maquettes/images/modifier_produit.png)
