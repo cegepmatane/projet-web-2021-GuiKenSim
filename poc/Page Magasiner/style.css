@@ -1,0 +1,47 @@
+.menu{
+	border: 3px solid black;
+	border-radius: 3px 3px 3px 3px;
+	display: flex;
+    
+}
+
+.liens_header{
+	text-align: center;
+	flex-grow: 1;
+	padding-top: 2.5em;
+	padding-right: 0.5em;
+	text-align: right;
+}
+
+.copyright{
+	text-align: center;
+	border: 3px solid black;
+	border-radius: 3px 3px 3px 3px;
+	text-align: center;
+}
+
+.magasiner_items_a_vendre{
+	display: flex;
+    width: 98%;
+    flex-wrap: wrap;
+    padding-top: 2.5em;
+    
+}
+
+.magasiner_items_a_vendre li{
+     
+  
+    margin-bottom: 2em;
+    width: 25%;
+    list-style: none;
+}
+
+
+.magasiner_items_a_vendre div{
+    padding: 25%;
+    width: 15%;
+    height: 15%;
+    border: 2px solid black;
+	border-radius: 1px 1px 1px 1px;
+    
+}
