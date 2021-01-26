@@ -1,0 +1,23 @@
+@font-face {
+  font-family: balsamiq;
+  src: url(../Ressources/font/Balsamiq.ttf);
+}
+
+body{
+	font-family: balsamiq;
+}
+
+.apropos{
+	display: block;
+	text-align: center;
+	padding-top: 5em;
+}
+
+.apropos h1{
+	padding-bottom: 1em;
+}
+
+.apropos p{
+	margin-left: 25%;
+	margin-right: 25%
+}

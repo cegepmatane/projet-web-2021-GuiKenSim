@@ -1,0 +1,9 @@
+.copyright{
+	position: fixed;
+	width: 98.75%;
+   	bottom: 0;
+   	margin-bottom: 0.5em;
+	text-align: center;
+	border: 3px solid black;
+	text-align: center;
+}
