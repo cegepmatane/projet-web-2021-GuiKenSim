@@ -4,7 +4,7 @@ $listeProduits = ProduitDAO::listerProduits();
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
 	<title> Boutique du Cégep de Matane </title>
 	<meta charset="UTF-8">
@@ -13,7 +13,7 @@ $listeProduits = ProduitDAO::listerProduits();
 	<link rel="stylesheet" href="./Decoration/magasiner.css">
 </head>
 <body>
-	<?php include "./menu.php"?>
+	<?php include 'menu.php' ?>
 
   	<div class="magasiner_titre">
   		<h1> Liste des items à vendre </h1>
@@ -41,11 +41,8 @@ $listeProduits = ProduitDAO::listerProduits();
             }
         ?>
     </ul>
-  	<footer class="copyright">
-  		<div>
-  			<p> © Tous droits réservés - Site développé par Kenny Maréchal, Simon Delarue et Guillaume d'Albignac </p>
-  		</div>  		
-  	</footer>
+
+  <?php include 'footer.php' ?>
 
 </body>
 </html>

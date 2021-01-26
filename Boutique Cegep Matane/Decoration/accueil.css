@@ -7,27 +7,6 @@ body{
 	font-family: balsamiq;
 }
 
-.menu{
-	padding: 0.5em;
-	border: 3px solid black;
-	border-radius: 3px 3px 3px 3px;
-	display: flex;
-}
-
-.lien_administration{
-	text-align: center;
-	flex-grow: 1;
-	padding-top: 3em;
-	padding-right: 1.5em;
-	text-align: right;
-}
-
-.lien_administration a{
-	padding: 0.5em;
-	text-decoration: none;
-	color: black;
-}
-
 .accueil{
 	display: block;
 	text-align: center;
@@ -54,12 +33,3 @@ body{
 	margin-top: 2.25em;
 }
 
-.copyright{
-	position: fixed;
-	width: 98.75%;
-   	bottom: 0;
-   	margin-bottom: 0.5em;
-	text-align: center;
-	border: 3px solid black;
-	text-align: center;
-}
