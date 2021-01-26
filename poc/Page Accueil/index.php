@@ -8,14 +8,7 @@
 </head>
 
 <body>
-	<header class="menu">
-    	<div class="logo">    
-	        <a href="index.php"><img src="./ressources/images/logo_cegep.png" alt="Logo Cégep Matane" class="logo" /></a>      
-    	</div>
-    	<div class="lien_administration">
-	         <a href="administration.php"> Administration </a>
-    	</div>
-  	</header>
+	<?php include 'menu.php' ?>
 
   	<div class="accueil">
   		<h1> Bienvenue sur la boutique en ligne du Cégep de Matane ! Cliquez sur MAGASINER pour commencer. </h1>
