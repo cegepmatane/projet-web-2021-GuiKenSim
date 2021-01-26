@@ -40,7 +40,6 @@
 
 .magasiner_items_a_vendre li{
      
-    
     margin-bottom: 2em;
     width: 25%;
     list-style: none;
@@ -54,8 +53,7 @@
     max-height: 256px;
     border: 2px solid black;
 	border-radius: 1px 1px 1px 1px;
-    
-    
+     
 }
 .magasiner_items_a_vendre img,a{
     

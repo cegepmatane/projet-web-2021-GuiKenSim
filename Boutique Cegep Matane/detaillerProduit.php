@@ -1,6 +1,7 @@
 <?php
 require "./accesseur/ProduitDAO.php";
-$produit = ProduitDAO::listerProduitParId(5);
+$id = filter_input(INPUT_GET, 'id' , FILTER_VALIDATE_INT);
+$produit = ProduitDAO::listerProduitParId($id);
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -16,7 +17,7 @@ $produit = ProduitDAO::listerProduitParId(5);
 
   	<div class="contenu">
 		<div class="contenu-image">
-			<img src="https://place-hold.it/300x500" alt="#">
+			<img src=<?=$produit["image"];?> alt="#" >
 		</div>
 		<div class="contenu-detailler">
 			<h1><?=$produit["titre"];?></h1>

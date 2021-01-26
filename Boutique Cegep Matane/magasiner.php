@@ -13,20 +13,7 @@ $listeProduits = ProduitDAO::listerProduits();
 	<link rel="stylesheet" href="./Decoration/magasiner.css">
 </head>
 <body>
-	<header class="menu">
-    	<div class="logo">    
-	        <img src="./Ressources/images/logo_cegep.png" alt="Logo Cégep Matane" class="logo" />	        
-    	</div>
-    	<div class="liens_header">
-            <a href="index.php"> Accueil </a>
-            
-            <a href="magasiner.php"> Magasiner </a>
-            
-            <a href="administration.php"> Administration </a>
-            
-            <a href="apropos.php"> À propos </a>
-    	</div>
-  	</header>
+	<?php include "./menu.php"?>
 
   	<div class="magasiner_titre">
   		<h1> Liste des items à vendre </h1>

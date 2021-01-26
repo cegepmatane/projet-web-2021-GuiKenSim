@@ -6,14 +6,19 @@
 }
 
 .contenu-image{
-    width: 30%;
-    height: 30%;
+    width: 50%;
+    height: 50%;
     margin-top: 2%;
+}
+.contenu-image img{
+    width: inherit;
+    height: inherit;
+    margin-top: inherit;
 }
 
 .contenu-detailler{
-    width: 70%;
-    height: 30%;
+    width: 50%;
+    height: 50%;
     margin-top: 2%;
     display: flex;
     flex-direction: column;

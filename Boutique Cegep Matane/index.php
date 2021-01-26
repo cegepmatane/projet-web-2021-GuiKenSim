@@ -18,8 +18,11 @@
 	  		</div> 		
   	</div> 
 
-  <?php include 'footer.php' ?>
-  	
+  	<footer class="copyright">
+  		<div>
+  			<p> © Tous droits réservés - Site développé par Kenny Maréchal, Simon Delarue et Guillaume d'Albignac </p>
+  		</div>  		
+  	</footer>
 </body>
 </html>
 
