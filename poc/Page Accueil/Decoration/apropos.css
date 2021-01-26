@@ -1,0 +1,55 @@
+@font-face {
+  font-family: balsamiq;
+  src: url(../Ressources/font/Balsamiq.ttf);
+}
+
+body{
+	font-family: balsamiq;
+}
+
+.menu{
+	padding: 0.5em;
+	border: 3px solid black;
+	border-radius: 3px 3px 3px 3px;
+	display: flex;
+}
+
+.lien_administration{
+	text-align: center;
+	flex-grow: 1;
+	padding-top: 3em;
+	padding-right: 1.5em;
+	text-align: right;
+}
+
+.lien_administration a{
+	padding: 0.5em;
+	text-decoration: none;
+	color: black;
+}
+
+.apropos{
+	display: block;
+	text-align: center;
+	padding-top: 5em;
+}
+
+.apropos h1{
+	padding-bottom: 1em;
+}
+
+.apropos p{
+	margin-left: 25%;
+	margin-right: 25%
+}
+
+.copyright{
+	position: fixed;
+	width: 98.75%;
+   	bottom: 0;
+   	margin-bottom: 0.5em;
+	text-align: center;
+	border: 3px solid black;
+	text-align: center;
+}
+

@@ -1,6 +1,6 @@
 @font-face {
   font-family: balsamiq;
-  src: url(./Balsamiq.ttf);
+  src: url(../Ressources/font/Balsamiq.ttf);
 }
 
 body{
@@ -39,7 +39,6 @@ body{
 }
 
 .bouton_magasiner{
-	font-family: balsamiq;
 	background-color: white;
 	color: black;
 	border: 4px solid black;
