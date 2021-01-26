@@ -10,12 +10,12 @@ $listeProduits = ProduitDAO::listerProduits();
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="./decoration/magasiner.css">
 </head>
 <body>
 	<header class="menu">
     	<div class="logo">    
-	        <img src="./logo_cegep.png" alt="Logo Cégep Matane" class="logo" />	        
+	        <img src="./decoration/logo_cegep.png" alt="Logo Cégep Matane" class="logo" />	        
     	</div>
     	<div class="liens_header">
             <a href="index.php"> Accueil </a>
@@ -40,18 +40,17 @@ $listeProduits = ProduitDAO::listerProduits();
                 
                 ?>
                     <li>
-                        <div class= magasiner_items_a_vendre_img>
-                            <img src=<?=$produit->image;?> alt="logo-item">
+                        <div>
+                            <a href="article?id=<?=$compter;?>" title = "appuyez pour le détail">
+                                <img src=<?=$produit->image;?> alt="logo-item">
+                            </a>
                         </div>
                         
                         <h3 class="titre"><?=$produit->titre;?></h3>
                         <span>n° article : <?=$compter;?> | Prix : <?=$produit->prix;?>$</span>
                         <button>Acheter</button>
                     </li>
-        
-                      
-                    
-                    
+
                 <?php
                 $compter++;
             }
