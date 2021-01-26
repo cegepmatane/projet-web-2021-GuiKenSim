@@ -3,7 +3,8 @@ a{
 }
 
 .menu{
-	width: 98.75%;
+	padding: 1%;
+	width: 97.75%;
 	border: 3px solid black;
 	border-radius: 3px 3px 3px 3px;
 	display:flex;
@@ -28,8 +29,4 @@ a{
     color: black;
     box-shadow: 2px 2px 2px black;
 	justify-content: center;
-}
-
-.logo-menu{
-
 }
