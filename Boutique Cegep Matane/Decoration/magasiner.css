@@ -1,0 +1,75 @@
+@font-face {
+  font-family: RobotoMonoItalic;
+  src: url(../Ressources/font/Roboto/Italic-VariableFont.ttf);
+}
+@font-face {
+  font-family: RobotoMono;
+  src: url(../Ressources/font/Roboto/VariableFont.ttf);
+}
+
+
+.menu{
+	border: 3px solid black;
+	border-radius: 3px 3px 3px 3px;
+	display: flex;
+    
+}
+
+.liens_header{
+	text-align: center;
+	flex-grow: 1;
+	padding-top: 2.5em;
+	padding-right: 0.5em;
+	text-align: right;
+}
+
+.copyright{
+	text-align: center;
+	border: 3px solid black;
+	border-radius: 3px 3px 3px 3px;
+	text-align: center;
+}
+
+.magasiner_items_a_vendre{
+	display: flex;
+    width: 98%;
+    flex-wrap: wrap;
+    padding-top: 2.5em;
+    
+}
+
+.magasiner_items_a_vendre li{
+     
+    
+    margin-bottom: 2em;
+    width: 25%;
+    list-style: none;
+}
+
+
+.magasiner_items_a_vendre div{
+    min-height: 256px;
+    min-width: 256px;
+    max-width: 256px;
+    max-height: 256px;
+    border: 2px solid black;
+	border-radius: 1px 1px 1px 1px;
+    
+    
+}
+.magasiner_items_a_vendre img,a{
+    
+    margin-left: 0px;
+    max-width: inherit;
+    max-height: inherit;
+}
+.magasiner_items_a_vendre span{
+    font-size: 80%;
+    font-weight:500;
+    font-family: RobotoMonoItalic;
+}
+.magasiner_items_a_vendre h3{
+    font-size: 110%;
+    font-family: RobotoMono;
+}
+

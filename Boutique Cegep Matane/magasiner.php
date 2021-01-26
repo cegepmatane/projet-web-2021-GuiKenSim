@@ -10,12 +10,12 @@ $listeProduits = ProduitDAO::listerProduits();
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="./decoration/magasiner.css">
+	<link rel="stylesheet" href="./Decoration/magasiner.css">
 </head>
 <body>
 	<header class="menu">
     	<div class="logo">    
-	        <img src="./decoration/logo_cegep.png" alt="Logo Cégep Matane" class="logo" />	        
+	        <img src="./Ressources/images/logo_cegep.png" alt="Logo Cégep Matane" class="logo" />	        
     	</div>
     	<div class="liens_header">
             <a href="index.php"> Accueil </a>
