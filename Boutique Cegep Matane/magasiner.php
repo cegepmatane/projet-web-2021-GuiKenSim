@@ -15,25 +15,24 @@ $listeProduits = ProduitDAO::listerProduits();
 <body>
 	<?php include 'menu.php' ?>
 
-  	<div class="magasiner_titre">
-  		<h1> Liste des items à vendre </h1>
-
+  	<div>
+  		<h1 class="magasiner_titre"> Liste des items à vendre </h1>
   	</div> 
-  	<ul class="magasiner_items_a_vendre">
+  	<ul class="magasiner_liste">
   	<?php
 
             foreach($listeProduits as $produit)
             {        
                 ?>
-                    <li>
-                        <div>
-                            <a href="detaillerProduit.php?id=<?=$produit->id;?>" title = "appuyez pour le détail">
-                                <img src=<?=$produit->image;?> alt="logo-item">
+                    <li class="magasiner_items">
+                        <div class="magasiner_div_image_cliquable">
+                            <a href="detaillerProduit.php?id=<?=$produit->id;?>" title = "appuyez pour le détail" class="magasiner_image_cliquable">
+                                <img src=<?=$produit->image;?> alt="logo-item" class="magasiner_image_cliquable">
                             </a>
                         </div>
                         
                         <h3 class="titre"><?=$produit->titre;?></h3>
-                        <span>n° article : <?=$produit->id;?> | Prix : <?=$produit->prix;?>$</span>
+                        <span class="magasiner_description_item">n° article : <?=$produit->id;?> | Prix : <?=$produit->prix;?>$</span>
                         <button>Acheter</button>
                     </li>
 
