@@ -3,7 +3,7 @@
   src: url(../Ressources/font/Balsamiq.ttf);
 }
 
-body{
+.page_apropos{
 	font-family: balsamiq;
 }
 
@@ -14,11 +14,11 @@ body{
 	margin-bottom: 6em;
 }
 
-.apropos h1{
+.titre_aporpos{
 	padding-bottom: 1em;
 }
 
-.apropos p{
+.texte_apropos{
 	margin-left: 25%;
 	margin-right: 25%
 }

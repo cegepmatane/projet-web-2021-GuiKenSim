@@ -7,11 +7,11 @@
 	<link rel="stylesheet" href="./Decoration/accueil.css">
 </head>
 
-<body>
+<body class="page_accueil">
 	<?php include 'menu.php' ?>
 
   	<div class="accueil">
-  		<h1> Bienvenue sur la boutique en ligne du Cégep de Matane ! Cliquez sur MAGASINER pour commencer. </h1>
+  		<h1 class="titre_accueil"> Bienvenue sur la boutique en ligne du Cégep de Matane ! Cliquez sur MAGASINER pour commencer. </h1>
   		<a href="magasiner.php" class="bouton_magasiner"> MAGASINER </a>
 	  		<div class="lien_apropos">
 	  			<a href="apropos.php"> À Propos de nous </a>

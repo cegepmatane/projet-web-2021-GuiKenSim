@@ -3,7 +3,7 @@
   src: url(../Ressources/font/Balsamiq.ttf);
 }
 
-body{
+.page_accueil{
 	font-family: balsamiq;
 }
 
@@ -13,7 +13,7 @@ body{
 	padding-top: 5em;
 }
 
-.accueil h1{
+.titre_accueil{
 	padding-bottom: 3.5em;
 }
 
@@ -31,6 +31,6 @@ body{
 
 .lien_apropos{
 	margin-top: 2.25em;
-	margin-bottom: 9em;
+	margin-bottom: 8em;
 }
 
