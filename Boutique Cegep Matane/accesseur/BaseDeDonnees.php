@@ -5,9 +5,9 @@ ini_set('display_errors', 1);
 class BaseDeDonnees{
   public static function getConnexion(){
     $usager = 'postgres';
-    $motdepasse = 'password';
+    $motdepasse = '';
     $hote = 'localhost';
-    $base = 'boutiquecegep';
+    $base = 'boutique_cegep';
     $dsn = "pgsql:host=$hote;dbname=$base;";
     $connexion = new PDO($dsn, $usager, $motdepasse);
     return $connexion;
