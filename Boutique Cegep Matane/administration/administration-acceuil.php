@@ -32,7 +32,7 @@ $listeProduits = ProduitDAO::listerProduits();
                 <span class="description">n° article : <?=$produit->id;?> | Prix : <?=$produit->prix;?>$</span>
                 <div class="bouton-contenant">
                     <a class="bouton" href="modifier-produit.php?id=<?=$produit->id;?>">Modifier</a>
-                    <a class="bouton">Supprimer</a>
+                    <a class="bouton" href="supprimer-produit.php">Supprimer</a>
                 </div>
             </li>
         <?php

@@ -14,7 +14,7 @@
         <div class="menu-navigation">
 	         <a href="index.php" class="bouton-menu"> Accueil </a>
 	         <a href="magasiner.php" class="bouton-menu"> Magasiner </a>
-	         <a href="administration.php" class="bouton-menu"> Administration </a>
+	         <a href="./administration/administration-acceuil.php" class="bouton-menu"> Administration </a>
 	         <a href="apropos.php" class="bouton-menu"> À Propos de nous </a>
         </div>
   	</header>
