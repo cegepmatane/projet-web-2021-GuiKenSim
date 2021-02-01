@@ -4,15 +4,16 @@
 	<title> Boutique du Cégep de Matane </title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="./Decoration/supprimer.css">
+	<link rel="stylesheet" href="../Decoration/supprimer.css">
 </head>
 
 <body class="body">
 	<?php include "menu-administration.php"?>
 
-  <div class="div_produit_supprimer">
+  <div class="produit_supprimer">
     <h1> Produit supprimé ! </h1>
-    <a href="administration-acceuil.php"> Retour </a>
+    <a class="bouton_retour" href="administration-acceuil.php"> Retour </a>
   </div>   	
+
 </body>
 </html>
