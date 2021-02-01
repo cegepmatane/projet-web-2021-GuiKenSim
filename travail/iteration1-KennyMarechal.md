@@ -16,4 +16,4 @@
 # Refonte du GitHub 3 heures
 - Refactaurer les fichiers : 3 heures
 # Creation de donnée fictif/ dossier fonctionelle 3 heures
-## Totale : 20 heures 30min
+## Total : 20 heures 30min
