@@ -1,3 +1,8 @@
+Une page d'accueil et une page décrivant la mission : https://github.com/cegepmatane/projet-web-2021-GuiKenSim/issues/1
+Un menu permettant la navigation entre les pages et un footer avec le Copyright : https://github.com/cegepmatane/projet-web-2021-GuiKenSim/issues/4
+Refactor de tout le github : https://github.com/cegepmatane/projet-web-2021-GuiKenSim/issues/10
+Faire une page supprimer pour l'administration : https://github.com/cegepmatane/projet-web-2021-GuiKenSim/issues/12
+
 # Maquettes 2 heures
 - Maquette de la page public accueil : 30min
 - Maquette de la page public à propos : 30min
