@@ -1,0 +1,67 @@
+.contenu{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contenu-image{
+    width: 50%;
+    height: 50%;
+    margin-top: 2%;
+}
+.contenu-image img{
+    width: inherit;
+    height: inherit;
+    margin-top: inherit;
+}
+
+.contenu-detailler{
+    width: 50%;
+    height: 100%;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.produit-formulaire{
+    display: flex;
+    width: 80%;
+    height: 100%;
+    flex-direction: column;
+    align-content: flex-start;
+}
+
+.champ{
+    width: 100%;
+    height: auto;
+    margin-top: 5%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.textarea-description{
+    width: 100%;
+    height: 200px;
+}
+
+.label-contenant{
+    width: 20%;
+}
+
+.input-contenant{
+    width: 80%;
+}
+
+.label-contenant-description{
+    width: 20%;
+}
+
+.input-contenant-description{
+    width: 80%;
+}
+
+.input{
+    
+}
