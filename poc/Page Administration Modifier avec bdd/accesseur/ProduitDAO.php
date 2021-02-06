@@ -23,19 +23,5 @@ class ProduitDAO{
         $produit = $requetteListerProduitsParId->fetch();
         return $produit;
     }
-
-    public static function modifierProduit($id,$titre,$description,$prix,$image){
-        $MESSAGE_SQL_MODIFIER_PRODUIT = "UPADTE produit SET id=".":id".",titre=".":titre".",".":description".",".":prix".",".":image".");";
-        $baseDeDonnees = BaseDeDonnees::getConnexion();
-        $requetteModifierProduits = $baseDeDonnees->prepare($MESSAGE_SQL_MODIFIER_PRODUIT);
-        $requetteModifierProduits->bindParam(':id', $id, PDO::PARAM_STR);
-        $requetteModifierProduits->bindParam(':titre', $titre, PDO::PARAM_STR);
-        $requetteModifierProduits->bindParam(':description', $description, PDO::PARAM_STR);
-        $requetteModifierProduits->bindParam(':prix', $prix, PDO::PARAM_INT);
-        $requetteModifierProduits->bindParam(':image', $image, PDO::PARAM_STR);
-        $requetteModifierProduits->execute();
-
-        return true;
-    }
 }
 ?>

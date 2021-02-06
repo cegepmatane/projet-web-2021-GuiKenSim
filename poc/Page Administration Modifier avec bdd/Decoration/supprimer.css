@@ -10,18 +10,6 @@
 .div_produit_supprimer{
 	margin-left: 25%;
 	margin-right: 25%;
-	margin-top: 5%;
+	margin-top: 25%;
 	text-align: center;
-}
-
-.bouton_retour{
-	background-color: white;
-	color: black;
-	border: 2px solid black;
-	font-size: 0.75em;
-	text-decoration: none;
-	padding: 0.5em;
-	padding-right: 1em;
-	padding-left: 1em;
-	box-shadow: 2px 2px 2px black;
 }
