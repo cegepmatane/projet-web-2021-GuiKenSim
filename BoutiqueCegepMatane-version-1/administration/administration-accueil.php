@@ -24,7 +24,7 @@ $listeProduits = ProduitDAO::listerProduits();
             <li class="item">
                 <div class="image-contenant">
                     <a class="lien-image" href="modifier-produit.php?id=<?=$produit->id;?>" title = "appuyez pour le détail">
-                        <img class="image" src="./Ressources/images/<?=$produit->image;?>" alt="logo-item">
+                        <img class="image" src="../Ressources/images/<?=$produit->image;?>" alt="logo-item">
                     </a>
                 </div>
                 

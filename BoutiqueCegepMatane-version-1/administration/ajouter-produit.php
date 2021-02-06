@@ -1,3 +1,9 @@
+<?php
+require "../accesseur/ProduitDAO.php";
+//$produit = ProduitDAO::ajouterProduit($titre,$description,$prix,$image);
+//../accesseur/upload-images.php
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -12,19 +18,20 @@
     <h2 class="titre">Ajouter un produit</h2>
   	<div class="formulaire-box">
             
-  		<form class="formulaire">
+  		<form class="formulaire" method="post" enctype="multipart/form-data" action= "../accesseur/traitement-ajouter-produit.php">
 
             <label for="nom" class="nom-champs">Nom </label>
-            <input type="text" class="champs" name="nom">
+            <input type="text" class="champs" name="nom" required>
             <label for="prix" class="nom-champs">Prix </label>
-            <input type="text" class="champs" name="prix">
-            <label for="description" class="nom-champs">Description </label>
-            <textarea class="champs" name="description" placeholder="entrez la description"></textarea>
+            <input type="text" class="champs" name="prix" required>
+            <label for="description" class="nom-champs" >Description </label>
+            <textarea class="champs" name="description" placeholder="entrez la description" required></textarea>
             <label for="monFichier" class="nom-champs">Image </label>
-            <input type="file" class="monFichier" name="monFichier">
+            <input type="file" class="fichierImage" name="fichierImage" required>
             <input type="submit" value="Ajouter" class="boutonAjouter">
         
         </form>
+      
         
   	</div> 
 

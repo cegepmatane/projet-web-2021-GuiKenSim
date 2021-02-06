@@ -9,7 +9,7 @@
 <body>
 	<header class="menu">
     	<div class="logo-menu">    
-	        <a href="../index.php"><img src="./Ressources/images/logo_cegep.png" alt="Logo Cégep Matane"/></a>	        
+	        <a href="../index.php"><img src="../Ressources/images/logo_cegep.png" alt="Logo Cégep Matane"/></a>	        
     	</div>
 		<div class="magasiner_titre">
   			<h1> Administration </h1>
