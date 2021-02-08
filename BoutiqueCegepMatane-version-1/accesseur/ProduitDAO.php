@@ -26,15 +26,23 @@ class ProduitDAO{
     public static function ajouterProduit($titre,$description,$prix,$image){
         $MESSAGE_SQL_AJOUTER_PRODUIT = "INSERT INTO produit (titre, description, prix, image) VALUES (".":titre".",".":description".",".":prix".",".":image".");";
         $baseDeDonnees = BaseDeDonnees::getConnexion();
-        $requetteAjouterProduits= $baseDeDonnees->prepare($MESSAGE_SQL_AJOUTER_PRODUIT);
-        $requetteAjouterProduits->bindParam(':titre', $titre, PDO::PARAM_STR);
-        $requetteAjouterProduits->bindParam(':description', $description, PDO::PARAM_STR);
-        $requetteAjouterProduits->bindParam(':prix', $prix, PDO::PARAM_STR);
-        $requetteAjouterProduits->bindParam(':image', $image, PDO::PARAM_STR);
-        $requetteAjouterProduits->execute();
-        $req = pg_get_result($requetteAjouterProduits);
-        echo pg_result_error($req);
-        return true;
+        $titre = filter_var($titre,FILTER_SANITIZE_STRING);
+        $description = filter_var($description,FILTER_SANITIZE_STRING);
+        if (!filter_var($prix, FILTER_SANITIZE_NUMBER_FLOAT) === false) {
+            $requetteAjouterProduits= $baseDeDonnees->prepare($MESSAGE_SQL_AJOUTER_PRODUIT);
+            $requetteAjouterProduits->bindParam(':titre', $titre, PDO::PARAM_STR);
+            $requetteAjouterProduits->bindParam(':description', $description, PDO::PARAM_STR);
+            $requetteAjouterProduits->bindParam(':prix', $prix, PDO::PARAM_STR);
+            $requetteAjouterProduits->bindParam(':image', $image, PDO::PARAM_STR);
+            $requetteAjouterProduits->execute();
+            $req = pg_get_result($requetteAjouterProduits);
+            echo pg_result_error($req);
+            return true;
+          
+        } else {
+          return false;
+        }
+        
     }
 }
 ?>
