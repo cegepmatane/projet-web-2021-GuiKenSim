@@ -43,7 +43,7 @@ $produit = ProduitDAO::listerProduitParId($id);
 					<label class="label">Description</label>
 				</div>
 				<div class="input-contenant-description">
-					<textarea class="textarea-description" name="description"> <?=$produit["description"]?> </textarea>
+					<textarea class="textarea-description" name="description"><?=$produit["description"]?></textarea>
 				</div>
 			</div>
 			<div class="champ">

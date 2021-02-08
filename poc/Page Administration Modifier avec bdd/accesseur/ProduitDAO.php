@@ -23,5 +23,20 @@ class ProduitDAO{
         $produit = $requetteListerProduitsParId->fetch();
         return $produit;
     }
+
+    public static function modifierProduit($id,$titre,$description,$prix,$image){
+        $MESSAGE_SQL_MODIFIER_PRODUIT = "UPDATE produit SET titre=".":titre".", description=".":description".", prix=".":prix".", image=".":image"." WHERE id=".":id".";";
+        $baseDeDonnees = BaseDeDonnees::getConnexion();
+        $requetteModifierProduits= $baseDeDonnees->prepare($MESSAGE_SQL_MODIFIER_PRODUIT);
+        $requetteModifierProduits->bindParam(':id', $id, PDO::PARAM_STR);
+        $requetteModifierProduits->bindParam(':titre', $titre, PDO::PARAM_STR);
+        $requetteModifierProduits->bindParam(':description', $description, PDO::PARAM_STR);
+        $requetteModifierProduits->bindParam(':prix', $prix, PDO::PARAM_STR);
+        $requetteModifierProduits->bindParam(':image', $image, PDO::PARAM_STR);
+        $requetteModifierProduits->execute();
+        $req = pg_get_result($requetteModifierProduits);
+        echo pg_result_error($req);
+        return true;
+    }
 }
 ?>
