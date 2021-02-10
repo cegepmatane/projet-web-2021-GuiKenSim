@@ -5,7 +5,7 @@ ini_set('display_errors', 1);
 class BaseDeDonnees{
   public static function getConnexion(){
     $usager = 'postgres';
-    $motdepasse = 'password';
+    $motdepasse = '';
     $hote = 'localhost';
     $base = 'boutiquecegep';
     $dsn = "pgsql:host=$hote;dbname=$base;";
