@@ -1,0 +1,65 @@
+@font-face {
+  font-family: balsamiq;
+  src: url(../Ressources/font/Balsamiq.ttf);
+}
+.body {
+    font-family: balsamiq;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    
+}
+.formulaire-box {
+    font-size: 150%;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: black;
+    width: 25%;
+    padding: 5%;
+    margin-top: 3%;
+    box-shadow: 2px 2px;
+
+}
+.formulaire {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    
+}
+.nom-champs{
+    width: 45%;
+    height: 100%;
+    margin-bottom: 2em;
+    font-weight: bold;
+    
+}
+.champs{
+    width: 50%;
+    height: 100%;
+    border-color: black;
+    box-shadow: 1px 1px;
+    border-radius: 3px;
+    margin: 1.25% auto;
+    align-items: flex-end;
+    -webkit-text-stroke-width: 0px;
+    justify-content: center;
+    font-family: balsamiq;
+    
+}
+
+.boutonAjouter {
+    width: 25%;
+    height: 50%;
+    border-color: black;
+    box-shadow: 1px 1px;
+    border-radius: 3px;
+    margin: 1.25% auto;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-size: 100%;
+    font-family: balsamiq;
+    
+}
+.titre {
+    margin-top: 2%;
+}
