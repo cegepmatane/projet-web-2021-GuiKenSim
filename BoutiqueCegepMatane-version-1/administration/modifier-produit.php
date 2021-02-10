@@ -21,7 +21,7 @@ $produit = ProduitDAO::listerProduitParId($id);
 		</div>
 		<div class="contenu-detailler">
 		<h1>Modifier Un Produit : </h1>
-		<form class="produit-formulaire" action="" method="POST" enctype="multipart/form-data">
+		<form class="produit-formulaire" action="../accesseur/traitement-modifier-produit.php" method="POST" enctype="multipart/form-data">
 			<div class="champ">
 				<div class="label-contenant">
 					<label class="label">Titre</label>
@@ -43,7 +43,7 @@ $produit = ProduitDAO::listerProduitParId($id);
 					<label class="label">Description</label>
 				</div>
 				<div class="input-contenant-description">
-					<textarea class="textarea-description"> <?=$produit["description"]?> </textarea>
+					<textarea class="textarea-description" name="description"> <?=$produit["description"]?> </textarea>
 				</div>
 			</div>
 			<div class="champ">
@@ -55,6 +55,8 @@ $produit = ProduitDAO::listerProduitParId($id);
 				</div>
 			</div>
 			<div class="champ">
+				<input type="hidden" name="id" value=<?=$id?> />
+				<input type="hidden" name="image" value=<?=$produit["image"];?> />
 				<input type="submit" value="Modifier"/>
 			</div>
 		</form>
