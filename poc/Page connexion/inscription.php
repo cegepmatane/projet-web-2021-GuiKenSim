@@ -1,5 +1,5 @@
 <?php
-require "../accesseur/ProduitDAO.php";
+//require "../accesseur/ProduitDAO.php";
 //$produit = ProduitDAO::ajouterProduit($titre,$description,$prix,$image);
 //../accesseur/upload-images.php
 ?>
@@ -10,36 +10,65 @@ require "../accesseur/ProduitDAO.php";
 	<title> Boutique du Cégep de Matane </title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="./decoration/inscription.css">
+	<link rel="stylesheet" href="./Decoration/inscription.css">
 </head>
 
-<body class="body">
-	<?php include 'menu-administration.php' ?>
-    <h2 class="titre">Inscription</h2>
-  	<div class="formulaire-box">
-            
-  		<form class="formulaire" method="post" enctype="multipart/form-data" action= "../accesseur/traitement-ajouter-produit.php">
+<body class="page-inscription">
+	<?php include 'menu.php' ?>
 
-            <label for="nom" class="nom-champs">Nom </label>
-            <input type="text" class="champs" name="nom" required>
-            <label for="prix" class="nom-champs">Prix </label>
-            <input type="text" class="champs" name="prix" required>
-            <label for="description" class="nom-champs" >Description </label>
-            <textarea class="champs" name="description" placeholder="entrez la description" required></textarea>
-            <label for="monFichier" class="nom-champs">Image </label>
-            <input type="file" class="fichierImage" name="fichierImage" required>
-            <input type="submit" value="Ajouter" class="boutonAjouter">
-        
-        </form>
-      
-        
+  	<div class="accueil">
+  		<h1 class="titre-page">Inscription à la boutique</h1>
+        <div class="boite-decoration">
+            <form action="action.php" class="page-inscription-formulaire">
+                <label>
+                    Nom d'utilisateur:
+                </label>
+                <input
+                    type="text"
+                    name="nomUtilisateur"
+                    autocomplete="off"    
+                    class="page-inscription-formulaire-input"
+                    required=true
+                />
+                <label>
+                    Adresse courriel :
+                </label>
+                <input
+                name="adresseCourriel"
+                type = "text"
+                class="page-inscription-formulaire-input"
+                required=true
+                />
+                <label>
+                    Mot de passe :
+                </label>
+                <input
+                name="motDePasse"
+                type = "password"
+                class="page-inscription-formulaire-input"
+                required=true
+                />
+                <label>
+                    Vérifier le mot de passe :
+                </label>
+                <input
+                name="motDePasse"
+                type = "password"
+                class="page-inscription-formulaire-input"
+                required=true
+                />
+                <p class="page-inscription-msgIncorrect">Les mots de passe ne correspondent pas</p>
+                <input type="submit" value="Inscription" class="page-inscription-bouton"/>
+            </form>
+            
+        </div>
+  			
   	</div> 
 
-  <?php include '../footer.php' ?>
+  <?php include 'footer.php' ?>
   	
 </body>
 </html>
-
 
 
 

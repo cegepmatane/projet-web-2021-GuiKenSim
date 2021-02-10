@@ -11,12 +11,11 @@
 	<?php include 'menu.php' ?>
 
   	<div class="accueil">
-  		<h1 class="titre-page"> Page de connexion </h1>
+  		<h1 class="titre-page"> Connexion à la boutique </h1>
         <div class="boite-decoration">
             <form action="action.php" class="page-connexion-formulaire">
                 <label>
                     Nom d'utilisateur:
-                    
                 </label>
                 <input
                     type="text"
@@ -27,7 +26,6 @@
                 />
                 <label>
                     Mot de passe :
-                    
                 </label>
                 <input
                 name="motDePasse"
