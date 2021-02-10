@@ -1,7 +1,9 @@
 <?php
 require "../accesseur/ProduitDAO.php";
 $id = filter_input(INPUT_GET, 'id' , FILTER_VALIDATE_INT);
-$produit = ProduitDAO::supprimerProduit($id);
+$produit = ProduitDAO::listerProduitParId($id);
+//print_r($produit->getId());
+ProduitDAO::supprimerProduit($produit->getId());
 ?>
 <!DOCTYPE html>
 <html lang="fr">

@@ -1,5 +1,6 @@
 <?php
-require "./accesseur/ProduitDAO.php";
+require "configuration.php";
+require "accesseur/ProduitDAO.php";
 $id = filter_input(INPUT_GET, 'id' , FILTER_VALIDATE_INT);
 $produit = ProduitDAO::listerProduitParId($id);
 ?>
@@ -17,13 +18,13 @@ $produit = ProduitDAO::listerProduitParId($id);
 
   	<div class="contenu">
 		<div class="contenu-image">
-			<img src="./Ressources/images/<?=$produit["image"];?>" alt="image-produit">
+			<img src="./Ressources/images/<?=$produit->getImage();?>" alt="image-produit">
 		</div>
 		<div class="contenu-detailler">
-			<h1><?=$produit["titre"];?></h1>
+			<h1><?=$produit->getTitre();?></h1>
 			<h3>Descriptif du produit</h3>
-			<p><?=$produit["description"];?></p>
-			<span>Prix : <?=$produit["prix"];?>$</span>
+			<p><?=$produit->getDescription();?></p>
+			<span>Prix : <?=$produit->getPrix();?>$</span>
 			<button class="bouton-acheter-produit">Acheter le produit</button>
 		</div>
   	</div> 

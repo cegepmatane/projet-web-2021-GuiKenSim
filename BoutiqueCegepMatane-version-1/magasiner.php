@@ -1,5 +1,6 @@
 <?php
-require "./accesseur/ProduitDAO.php";
+require "configuration.php";
+require "accesseur/ProduitDAO.php";
 $listeProduits = ProduitDAO::listerProduits();
 ?>
 

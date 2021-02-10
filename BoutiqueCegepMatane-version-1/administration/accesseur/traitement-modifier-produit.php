@@ -73,7 +73,7 @@
 <body class="body">
   <div class="div_produit_supprimer">
     <h1> Modification du produit : <?=$succes_modifier?> </h1>
-    <a href="../administration/administration-accueil.php" class="bouton_retour"> Retour </a>
+    <a href="../administration-accueil.php" class="bouton_retour"> Retour </a>
   </div>    
 </body>
 </html>

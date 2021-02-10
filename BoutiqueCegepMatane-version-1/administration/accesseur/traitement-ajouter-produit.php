@@ -1,6 +1,6 @@
 <?php
-    require "./ProduitDAO.php";
-    require "../modele/Produit.php";
+    require "ProduitDAO.php";
+
     if(isset($_FILES['fichierImage'])){
         
         $nom_image = $_FILES['fichierImage']['name'];
@@ -44,7 +44,7 @@
            
             
             if(ProduitDAO::ajouterProduit($nom,$description,$prix,$nom_image)){
-                move_uploaded_file($file_tmp,"../ressources/images/".$nom_image);
+                move_uploaded_file($file_tmp,"../../ressources/images/".$nom_image);
                 $succes_ajout = "succès";
             }else{
                 $succes_ajout = "erreur : problème avec la base de données";
@@ -70,7 +70,7 @@
 
   <div class="div_produit_ajouter">
     <h1> Ajout du produit : <?=$succes_ajout?> </h1>
-    <a href="../administration/administration-accueil.php"> Retour </a>
+    <a href="../administration-accueil.php"> Retour </a>
   </div>   	
 </body>
 </html>

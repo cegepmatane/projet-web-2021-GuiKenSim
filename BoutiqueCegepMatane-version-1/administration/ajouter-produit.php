@@ -1,5 +1,5 @@
 <?php
-require "../accesseur/ProduitDAO.php";
+require "./accesseur/ProduitDAO.php";
 //$produit = ProduitDAO::ajouterProduit($titre,$description,$prix,$image);
 //../accesseur/upload-images.php
 ?>
@@ -18,7 +18,7 @@ require "../accesseur/ProduitDAO.php";
     <h2 class="titre">Ajouter un produit</h2>
   	<div class="formulaire-box">
             
-  		<form class="formulaire" method="post" enctype="multipart/form-data" action= "../accesseur/traitement-ajouter-produit.php">
+  		<form class="formulaire" method="post" enctype="multipart/form-data" action= "./accesseur/traitement-ajouter-produit.php">
 
             <label for="nom" class="nom-champs">Nom </label>
             <input type="text" class="champs" name="nom" required>

@@ -1,6 +1,8 @@
 <?php
-require_once "accesseur/BaseDeDonnees.php";
-require_once "./modele/Produit.php";
+require "configuration.php";
+//require CHEMIN_MODELE . "Produit.php";
+require "../modele/Produit.php";
+require "BaseDeDonnees.php";
 class ProduitDAO{
     
     public static function listerProduits(){
