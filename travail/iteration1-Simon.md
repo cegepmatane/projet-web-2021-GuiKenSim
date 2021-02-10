@@ -11,6 +11,6 @@ Refactor de tout le github https://github.com/cegepmatane/projet-web-2021-GuiKen
 # Refactor 5 heures
 - Refactor de tout le GitHub, c'est à dire refaire les dossiers, renommer les maquettes et les refaire si besoin : 4h
 - Refactor du CSS magasiner pour le rendre lisible : 1h
-# Code de la page administration ajouter 2 heure
+# Code de la page administration ajouter 5 heure
 
-## Total : 20 heures
+## Total : 23 heures
