@@ -17,7 +17,7 @@ $produit = ProduitDAO::listerProduitParId($id);
 
   	<div class="contenu">
 		<div class="contenu-image">
-			<img src="./Ressources/images/<?=$produit["image"];?>" alt="logo-item" >
+			<img src="../Ressources/images/<?=$produit["image"];?>" alt="logo-item" >
 		</div>
 		<div class="contenu-detailler">
 		<h1>Modifier Un Produit : </h1>

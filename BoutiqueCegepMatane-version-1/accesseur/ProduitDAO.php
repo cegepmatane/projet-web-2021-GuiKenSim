@@ -60,5 +60,13 @@ class ProduitDAO{
         echo pg_result_error($req);
         return true;
     }
+
+    public static function supprimerProduit($idProduit){
+        $MESSAGE_SQL_SUPPRIMER_PRODUIT = "DELETE FROM produit WHERE id=".":id".";";
+        $baseDeDonnees = BaseDeDonnees::getConnexion();
+        $requetteSupprimerProduit = $baseDeDonnees->prepare($MESSAGE_SQL_SUPPRIMER_PRODUIT);
+        $requetteSupprimerProduit->bindParam(':id', $idProduit, PDO::PARAM_STR);
+        $requetteSupprimerProduit->execute();
+    }
 }
 ?>
