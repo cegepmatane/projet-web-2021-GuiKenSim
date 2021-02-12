@@ -1,29 +1,12 @@
 <?php
-    require "./ProduitDAO.php";
-    require "../modele/Produit.php";
-    if(isset($_FILES['fichierImage'])){
+    require "./UtilisateurDAO.php";
+    require "../modele/Utilisateur.php";    
         
-        $nom_image = $_FILES['fichierImage']['name'];
-        $file_size = $_FILES['fichierImage']['size'];
-        $file_tmp = $_FILES['fichierImage']['tmp_name'];
-        $file_type = $_FILES['fichierImage']['type'];
-        $file_ext = strtolower(pathinfo("../ressources/images/".$nom_image,PATHINFO_EXTENSION));
-        
-        $erreurs= array();
-        $succes_ajout = "erreur durant l'ajout";
-        $extensions= array("jpeg","jpg","png");
-        
-        $nom = $_REQUEST['nom'];
-        $prix = $_REQUEST['prix'];
-        $description = $_REQUEST['description'];
-        
-        if(in_array($file_ext,$extensions)=== false){
-            $erreurs[]="Extension de fichier non autorisée, veuillez upload une image en jpg,jpeg ou png.";
-        }
-        if($file_size > 2097152) {
-            $erreurs[]="Limage ne doit pas faire plus de 2MB";
-        }
-        if(empty($nom)==true || empty($prix)==true ||empty($description)==true) {
+        $pseudo = $_REQUEST['pseudo'];
+        $email = $_REQUEST['email'];
+        $motdepasse = $_REQUEST['motdepasse'];
+
+        if(empty($pseudo)==true || empty($email)==true ||empty($motdepasse)==true) {
             $erreurs[]="Un des champs obligatoire est vide !";
         }
         if (strpos($prix, '$') !== false) {
@@ -39,12 +22,8 @@
             $erreurs[]="Il ne faut pas mettre de liens dans les champs";
         }
         if(empty($erreurs)==true) {
-            $nom_image = $nom.".".$file_ext;
             
-           
-            
-            if(ProduitDAO::ajouterProduit($nom,$description,$prix,$nom_image)){
-                move_uploaded_file($file_tmp,"../ressources/images/".$nom_image);
+            if(UtilisateurDAO::ajouterUtilisateur($pseudo,$email,$motdepasseCrypte)){
                 $succes_ajout = "succès";
             }else{
                 $succes_ajout = "erreur : problème avec la base de données";
@@ -53,7 +32,7 @@
         }else{
             $succes_ajout = "erreur durant l'ajout ".$erreurs[0];
         }
-    }
+
 
 ?>
 
