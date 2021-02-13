@@ -1,25 +1,32 @@
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_new">
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<title> Boutique du Cégep de Matane </title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="./Decoration/accueil.css">
+</head>
 
-	<?php $montantPaiement=12.99 ?>
+<body class="page_accueil">
+	<?php include 'menu.php' ?>
 
-	<input type="hidden" name="amount" value="<?=$montantPaiement?>">
+  	<div class="accueil">
+  		<h1 class="titre_accueil"> Bienvenue sur la boutique en ligne du Cégep de Matane ! Cliquez sur MAGASINER pour commencer. </h1>
+  		<a href="magasiner.php" class="bouton_magasiner"> MAGASINER </a>
+	  		<div class="lien_apropos">
+	  			<a href="apropos.php"> À Propos de nous </a>
+	  		</div> 		
+  	</div> 
 
-	<input type="hidden" name="currency_code" value="CAD">			
-	<input type="hidden" name="business" value="mailClient@fournisseur.ca">
-	<input type="hidden" name="item_name" value="Souris RGB">
-	
-	<input type="hidden" name="lc" value="en">
-	<input type="hidden" name="no_shipping" value="1">
-	<input type="hidden" name="cmd" value="_xclick">	
-	
-	<input class="submit" type="submit" name="command" value="Effectuer le paiement de <?=$montantPaiement?>">
-	
-	<input type="hidden" name="rm" value="2">
+  <?php include 'footer.php' ?>
+  	
+</body>
+</html>
 
-	<input type="hidden" name="src" value="1">
-	<input type="hidden" name="sra" value="1">						
-	
-	<!--input type="hidden" name="cpp_headerback_color" value="000000"/>
-	<input type="hidden" name="cpp_headerborder_color" value="ff0000"/-->
-	
-</form>
+
+
+
+
+
+
+
