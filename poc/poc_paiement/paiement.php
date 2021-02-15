@@ -40,7 +40,7 @@
 			<form class="transaction-produit" action="https://www.paypal.com/cgi-bin/webscr" method="POST" target="_new">
 				<input type="hidden" name="amount" value="<?=$prixTTC?>">	
 				<input type="hidden" name="currency_code" value="CAD">
-				<input type="hidden" name="business" value="<?=$courrielClient?>">
+				<input type="hidden" name="business" value="dalbignacguillaume@gmail.com">
 				<input type="hidden" name="item_name" value="<?=$titre?>">	
 
 				<input type="hidden" name="lc" value="en">

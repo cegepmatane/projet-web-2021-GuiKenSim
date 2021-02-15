@@ -112,3 +112,22 @@
 	width: 100%;
 	padding: 5%;
 }
+
+.succes-commande{
+	font-family: balsamiq;
+	margin-left: 35%;
+	margin-top: 5%;
+	margin-bottom: 20%;
+}
+
+.bouton-retour{
+	text-decoration: none;
+	margin-left: 20%; 
+	height: 55%;
+	width: 8%;
+	background-color: #ffff;
+    padding: 0.5%;
+    border: 2px solid black;
+    color: black;
+    box-shadow: 2px 2px black;
+}
