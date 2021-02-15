@@ -5,7 +5,7 @@
 -- Dumped from database version 12.4
 -- Dumped by pg_dump version 12.4
 
--- Started on 2021-02-15 08:15:17
+-- Started on 2021-02-15 08:22:54
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -40,6 +40,74 @@ SET check_function_bodies = false;
 SET xmloption = content;
 SET client_min_messages = warning;
 SET row_security = off;
+
+SET default_tablespace = '';
+
+SET default_table_access_method = heap;
+
+--
+-- TOC entry 202 (class 1259 OID 41044)
+-- Name: produit; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.produit (
+    id integer NOT NULL,
+    titre character varying(50),
+    description text,
+    prix real,
+    image character varying(200)
+);
+
+
+ALTER TABLE public.produit OWNER TO postgres;
+
+--
+-- TOC entry 203 (class 1259 OID 41050)
+-- Name: produit_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE public.produit_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.produit_id_seq OWNER TO postgres;
+
+--
+-- TOC entry 2833 (class 0 OID 0)
+-- Dependencies: 203
+-- Name: produit_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE public.produit_id_seq OWNED BY public.produit.id;
+
+
+--
+-- TOC entry 204 (class 1259 OID 49236)
+-- Name: utilisateurs; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.utilisateurs (
+    id integer NOT NULL,
+    pseudo text,
+    courriel character varying(80),
+    motdepasse character varying(256)
+);
+
+
+ALTER TABLE public.utilisateurs OWNER TO postgres;
+
+--
+-- TOC entry 2693 (class 2604 OID 41052)
+-- Name: produit id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.produit ALTER COLUMN id SET DEFAULT nextval('public.produit_id_seq'::regclass);
+
 
 --
 -- TOC entry 2824 (class 0 OID 41044)
@@ -78,7 +146,25 @@ INSERT INTO public.utilisateurs VALUES (1, 'FuZzyy14', 'simon.delarue2@gmail.com
 SELECT pg_catalog.setval('public.produit_id_seq', 19, true);
 
 
--- Completed on 2021-02-15 08:15:17
+--
+-- TOC entry 2695 (class 2606 OID 41054)
+-- Name: produit produit_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.produit
+    ADD CONSTRAINT produit_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2697 (class 2606 OID 49243)
+-- Name: utilisateurs utilisateurs_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.utilisateurs
+    ADD CONSTRAINT utilisateurs_pkey PRIMARY KEY (id);
+
+
+-- Completed on 2021-02-15 08:22:54
 
 --
 -- PostgreSQL database dump complete
