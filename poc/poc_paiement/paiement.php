@@ -37,8 +37,21 @@
 				<li class="element-liste"> ================== </li>
 				<li class="element-liste"> Total TTC :  <?=round($prixTTC, 2)?> $ </li>
 			</ul>
-			<form class="transaction-produit" action="lien vers paypal" method="POST" enctype="multipart/form-data">
+			<form class="transaction-produit" action="https://www.paypal.com/cgi-bin/webscr" method="POST" target="_new">
+				<input type="hidden" name="amount" value="<?=$prixTTC?>">	
+				<input type="hidden" name="currency_code" value="CAD">
+				<input type="hidden" name="business" value="<?=$courrielClient?>">
+				<input type="hidden" name="item_name" value="<?=$titre?>">	
+
+				<input type="hidden" name="lc" value="en">
+				<input type="hidden" name="no_shipping" value="1">
+				<input type="hidden" name="cmd" value="_xclick">
+
             	<input type="submit" value="Payer" class="bouton-payer"> 
+
+            	<input type="hidden" name="rm" value="2">
+				<input type="hidden" name="src" value="1">
+				<input type="hidden" name="sra" value="1">
             </form>			
 		</div>
 

@@ -24,7 +24,11 @@ $produit = ProduitDAO::listerProduitParId($id);
 			<h3>Descriptif du produit</h3>
 			<p><?=$produit["description"];?></p>
 			<span>Prix : <?=$produit["prix"];?>$</span>
-			<button class="bouton-acheter-produit">Acheter le produit</button>
+			<form class="acheter-produit" action="paiement.php" method="POST" enctype="multipart/form-data">
+                <input type="hidden" name="titre" value="<?=$produit["titre"];?>" />
+                <input type="hidden" name="prix" value="<?=$produit["prix"];?>" />
+            	<input type="submit" value="Acheter le produit"> 
+            </form>
 		</div>
   	</div> 
 

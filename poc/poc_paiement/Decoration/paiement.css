@@ -36,7 +36,7 @@
 }
 
 .liste-commande{
-	width: 90%;
+	width: 100%;
 	list-style: none;
 	font-weight: bold;
 	margin-left: 10%;
@@ -44,7 +44,8 @@
 }
 
 .element-liste{
-	padding: 7%;
+	width: 100%;
+	padding: 5%;
 }
 
 .informations-client{
@@ -99,13 +100,15 @@
 }
 
 .liste-client{
-	width: 90%;
+	width: 100%;
 	list-style: none;
 	font-weight: bold;
 	margin-left: 10%;
 	font-size: 1.25em;
+	padding: auto;
 }
 
 .element-liste-client{
-	padding: 6%;
+	width: 100%;
+	padding: 5%;
 }
