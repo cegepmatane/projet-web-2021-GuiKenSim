@@ -1,6 +1,5 @@
 <?php
-    require "./accesseur/UtilisateurDAO.php";
-    require "./modele/Utilisateur.php";    
+    require "./accesseur/UtilisateurDAO.php";  
     $succes_ajout = "";
     if(isset($_POST['BoutonInscription'])){ //check if form was submitted
         
@@ -8,46 +7,63 @@
         $courriel = $_REQUEST['courriel'];
         $motdepasse = $_REQUEST['motdepasse'];
         $motdepasseVerif = $_REQUEST['motdepasseVerif'];
-        echo $pseudo.$courriel.$motdepasse;
-        $erreurs= array();
+        $utilisateur = new Utilisateur(null,$pseudo,$courriel,$motdepasse);
         
-        if (!preg_match("/^[a-zA-Z-0-9-' ]*$/",$pseudo)) {
+        $erreurs= array();
+        if (!preg_match("/^[a-zA-Z-0-9-' ]*$/",$utilisateur->getPseudo())) {
           $erreurs[]="Seulement des lettres et espaces sont autorisés";
         }
-        if ($motdepasse !== $motdepasseVerif) {
+        if (strlen($utilisateur->getMotDePasse()) < 7 ) {
+            $erreurs[]="Le mot de passe doit faire 8 caractères minimum";
+        }
+        if ($utilisateur->getMotDePasse() !== $motdepasseVerif) {
             $erreurs[]="Les mots de passe ne correspondent pas";
         }
-        if(empty($pseudo)==true || empty($courriel)==true ||empty($motdepasse)==true) {
+        if(empty($utilisateur->getPseudo())==true || empty($utilisateur->getCourriel())==true ||empty($utilisateur->getMotDePasse())==true) {
             $erreurs[]="Un des champs obligatoire est vide !";
         }
-        if (!filter_var($courriel, FILTER_VALIDATE_EMAIL)) {
+        if (!filter_var($utilisateur->getCourriel(), FILTER_VALIDATE_EMAIL)) {
           $erreurs[]="Veuillez entrer un courriel valide";
         }
-         if(!is_string($pseudo)){
+         if(!is_string($utilisateur->getPseudo())){
             $erreurs[]="Le pseudo doit être du texte !";
         }
-        if(!is_string($courriel)){
+        if(!is_string($utilisateur->getCourriel())){
             $erreurs[]="Le courriel doit être du texte !";
         }
-        if(is_link($pseudo) || is_link($courriel) || is_link($motdepasse)){
+        if(is_link($utilisateur->getPseudo()) || is_link($utilisateur->getCourriel()) || is_link($utilisateur->getMotDePasse())){
             $erreurs[]="Il ne faut pas mettre de liens dans les champs";
         }
+        // s'il n'y a pas d'erreur avant l'envoi
         if(empty($erreurs)==true) {
             
-            $motdepasseCrypte = password_hash($motdepasse , PASSWORD_DEFAULT);
-            $utilisateur = new Utilisateur(null,$pseudo,$courriel,$motdepasseCrypte);
-            if(UtilisateurDAO::ajouterUtilisateur($utilisateur)){
+            
+            //$utilisateur = new Utilisateur(null,$pseudo,$courriel,$motdepasseCrypte);
+            $erreurs[]= UtilisateurDAO::ajouterUtilisateur($utilisateur); // on exécute la fonction ajouterUtilisateur
+            
+            // On vérifie qu'il n'y a pas d'erreurs
+            if($erreurs[0] == false){
                 echo "succes";
                 $succes_ajout = "succès";
             }else{
-                $succes_ajout = "erreur : problème avec la base de données";
-                echo "erreur bdd";
+                // foreach pour afficher toutes les erreurs venant de la base
+                foreach ($erreurs as $erreur){
+                    $succes_ajout = $succes_ajout."● erreur : ".$erreur."<br/>";
+                }
+                echo "erreur au niveau de la base";
             }
             
         }else{
-            $succes_ajout = "".$erreurs[0];
-            echo "erreurs : ".$erreurs[0];
+            foreach ($erreurs as $erreur){
+                    $succes_ajout = $succes_ajout."● erreur : ".$erreur."<br/>";
+                    echo "erreur : ".$erreur;
+                }
+            
         }
+        
+        //valider le mot de passe : https://www.w3schools.com/howto/howto_js_password_validation.asp
+        //crypter le mot de passe : https://www.php.net/manual/fr/function.password-verify.php | https://www.php.net/manual/fr/function.password-hash.php
+        
 
 }
         
@@ -79,6 +95,7 @@
                     name="pseudo"
                     autocomplete="off"    
                     class="page-inscription-formulaire-input"
+                    title="nom d'utilisateur"
                     required=true
                 />
                 <label>
@@ -89,6 +106,7 @@
                 type = "text"
                 autocomplete="off" 
                 class="page-inscription-formulaire-input"
+                title="adresse courriel"
                 required=true
                 />
                 <label>
@@ -98,6 +116,7 @@
                 name="motdepasse"
                 type = "password"
                 class="page-inscription-formulaire-input"
+                title="Doit contenir au moins un chiffre, une minuscule et une majuscule et faire plus de 8 caractères"
                 required=true
                 />
                 <label>
@@ -107,6 +126,7 @@
                 name="motdepasseVerif"
                 type = "password"
                 class="page-inscription-formulaire-input"
+                title="Vérification du mot de passe"
                 required=true
                 />
                 <p class="page-inscription-msgIncorrect"><?php echo $succes_ajout ?></p>

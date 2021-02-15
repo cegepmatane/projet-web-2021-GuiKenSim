@@ -1,5 +1,6 @@
 <?php
 require "BaseDeDonnees.php";
+require "./modele/Utilisateur.php"; 
 class UtilisateurDAO{
     
     /*public static function listerProduits(){
@@ -19,29 +20,39 @@ class UtilisateurDAO{
         $requetterecupUtilisateurParPseudo->bindParam(':pseudo', $pseudo, PDO::PARAM_STR);
         $requetterecupUtilisateurParPseudo->execute();
     
-        $produit = $requetteListerProduitsParId->fetch();
-        return $produit;
+        $utilisateurs = $requetterecupUtilisateurParPseudo->fetch();
+        return $utilisateurs;
     }
     
-    public static function ajouterUtilisateur($pseudo,$courriel,$motdepasse){
+    public static function ajouterUtilisateur($utilisateur){
         
-        echo $pseudo;
-        
-       /* $MESSAGE_SQL_AJOUTER_UTILISATEUR = "INSERT INTO utilisateurs (pseudo, courriel, motdepasse) VALUES (".":pseudo".",".":courriel".",".":motdepasse".");";
+        echo "pseudo : ".$utilisateur->getPseudo();
+        $MESSAGE_SQL_PSEUDO_EXISTANT = "SELECT pseudo FROM utilisateurs WHERE pseudo = :pseudo";
+        $baseDeDonnees = BaseDeDonnees::getConnexion();
+        $requetteChercherUtilisateur = $baseDeDonnees->prepare($MESSAGE_SQL_PSEUDO_EXISTANT);
+        $pseudoUtilisateur = $utilisateur->getPseudo();
+        $requetteChercherUtilisateur->bindParam(':pseudo', $pseudoUtilisateur, PDO::PARAM_STR);
+        $requetteChercherUtilisateur->execute();
+        $utilisateur = $requetteChercherUtilisateur->fetch(PDO::FETCH_ASSOC);
+
+        if (isset($utilisateur) && !empty($utilisateur)){
+        return "utilisateur ou pseudo déjà existant";
+        }
+       /* $MESSAGE_SQL_AJOUTER_UTILISATEUR = "INSERT INTO utilisateurs ($utilisateur->getPseudo(), courriel, motdepasse) VALUES (".":pseudo".",".":courriel".",".":motdepasse".");";
         $baseDeDonnees = BaseDeDonnees::getConnexion();
         
         if (!filter_var($prix, FILTER_SANITIZE_NUMBER_FLOAT) === false) {
-            $requetteAjouterProduits= $baseDeDonnees->prepare($MESSAGE_SQL_AJOUTER_PRODUIT);
-            $requetteAjouterProduits->bindParam(':pseudo', $titre, PDO::PARAM_STR);
-            $requetteAjouterProduits->bindParam(':courriel', $description, PDO::PARAM_STR);
-            $requetteAjouterProduits->bindParam(':motdepasse', $prix, PDO::PARAM_STR);
-            $requetteAjouterProduits->execute();
+            $requetteAjouterUtilisateur= $baseDeDonnees->prepare($MESSAGE_SQL_AJOUTER_UTILISATEUR);
+            $requetteAjouterUtilisateur->bindParam(':pseudo', $titre, PDO::PARAM_STR);
+            $requetteAjouterUtilisateur->bindParam(':courriel', $description, PDO::PARAM_STR);
+            $requetteAjouterUtilisateur->bindParam(':motdepasse', $prix, PDO::PARAM_STR);
+            $requetteAjouterUtilisateur->execute();
             $req = pg_get_result($requetteAjouterProduits);
             echo pg_result_error($req);
-            return true;
+            return false;
           
         } else {
-          return false;
+          return true;
         }*/
         
     }
