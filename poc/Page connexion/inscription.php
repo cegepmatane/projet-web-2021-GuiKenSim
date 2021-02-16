@@ -60,7 +60,9 @@
                 }
             
         }
-        
+        // Tuto pour les forms https://magemastery.net/courses/user-registration-with-php-mysql/form-validation
+        // Faire dans l'utilisateur pour les erreurs envoyer une erreur : https://www.php.net/manual/fr/function.filter-var.php
+        // Session pour les cookies https://www.sitepoint.com/users-php-sessions-mysql/
         //valider le mot de passe : https://www.w3schools.com/howto/howto_js_password_validation.asp
         //crypter le mot de passe : https://www.php.net/manual/fr/function.password-verify.php | https://www.php.net/manual/fr/function.password-hash.php
         
