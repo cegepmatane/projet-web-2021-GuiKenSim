@@ -1,3 +1,15 @@
+<?php
+    require_once "./modele/Utilisateur.php";
+    session_start();
+    if(empty($_SESSION)){
+        $bouton_utilisateur ='<a href="connexion.php" class="bouton-menu"> Connexion </a>';
+    }
+    else{
+        $bouton_utilisateur ='<a href="profil.php" class="bouton-menu"> Profil </a>';
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -16,6 +28,7 @@
 	         <a href="magasiner.php" class="bouton-menu"> Magasiner </a>
 	         <a href="./administration/administration-accueil.php" class="bouton-menu"> Administration </a>
 	         <a href="apropos.php" class="bouton-menu"> À Propos de nous </a>
+             <?php echo $bouton_utilisateur ?>
         </div>
   	</header>
 </body>

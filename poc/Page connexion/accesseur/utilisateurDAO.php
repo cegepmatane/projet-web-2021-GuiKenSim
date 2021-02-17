@@ -1,6 +1,6 @@
 <?php
-require "BaseDeDonnees.php";
-require "./modele/Utilisateur.php"; 
+require_once "BaseDeDonnees.php";
+require_once "./modele/Utilisateur.php"; 
 class UtilisateurDAO{
 
     public static function recupUtilisateurParPseudo($pseudo){
