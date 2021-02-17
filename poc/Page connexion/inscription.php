@@ -8,10 +8,11 @@
         $motdepasse = $_REQUEST['motdepasse'];
         $motdepasseVerif = $_REQUEST['motdepasseVerif'];
         $utilisateur = new Utilisateur(null,$pseudo,$courriel,$motdepasse);
+        $erreurs= array(); // tableau ou on stocke les erreurs
         
-        $erreurs= array();
+        // vérification des entrées utilisateur
         if (!preg_match("/^[a-zA-Z-0-9-' ]*$/",$utilisateur->getPseudo())) {
-          $erreurs[]="Seulement des lettres et espaces sont autorisés";
+          $erreurs[]="Seulement des lettres, chiffres et espaces sont autorisés";
         }
         if (strlen($utilisateur->getMotDePasse()) < 7 ) {
             $erreurs[]="Le mot de passe doit faire 8 caractères minimum";
@@ -34,10 +35,10 @@
         if(is_link($utilisateur->getPseudo()) || is_link($utilisateur->getCourriel()) || is_link($utilisateur->getMotDePasse())){
             $erreurs[]="Il ne faut pas mettre de liens dans les champs";
         }
+        
         // s'il n'y a pas d'erreur avant l'envoi
         if(empty($erreurs)==true) {
             $utilisateur->setMotDePasse(password_hash($utilisateur->getMotDePasse(), PASSWORD_DEFAULT));
-            
             $erreurs[]= UtilisateurDAO::ajouterUtilisateur($utilisateur); // on exécute la fonction ajouterUtilisateur
             
             // On vérifie qu'il n'y a pas d'erreurs
@@ -49,7 +50,6 @@
                 foreach ($erreurs as $erreur){
                     $succes_ajout = $succes_ajout."● erreur : ".$erreur."<br/>";
                 }
-                echo "erreur au niveau de la base";
             }
             
         }else{
@@ -57,7 +57,6 @@
                     $succes_ajout = $succes_ajout."● erreur : ".$erreur."<br/>";
                     echo "erreur : ".$erreur;
                 }
-            
         }
         // Tuto pour les forms https://magemastery.net/courses/user-registration-with-php-mysql/form-validation
         // Faire dans l'utilisateur pour les erreurs envoyer une erreur : https://www.php.net/manual/fr/function.filter-var.php
@@ -65,12 +64,9 @@
         //valider le mot de passe : https://www.w3schools.com/howto/howto_js_password_validation.asp
         //crypter le mot de passe : https://www.php.net/manual/fr/function.password-verify.php | https://www.php.net/manual/fr/function.password-hash.php
         
-
 }
         
-
 ?>
-
 
 
 <!DOCTYPE html>
