@@ -63,7 +63,7 @@ class Utilisateur{
 
     public function setMotDePasse($motdepasse)
     {
-        $this->motdepasse = filter_var($motdepasse,FILTER_SANITIZE_ENCODED);
+        $this->motdepasse = $motdepasse;
 
         return $this->motdepasse;
     }

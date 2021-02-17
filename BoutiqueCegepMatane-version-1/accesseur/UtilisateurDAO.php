@@ -52,7 +52,6 @@ class UtilisateurDAO{
         $pseudo = $utilisateur->getPseudo();
         $courriel = $utilisateur->getCourriel();
         $motdepasse = $utilisateur->getMotDePasse();
-        print_r($pseudo.$motdepasse.$courriel);
         $requetteAjouterUtilisateur= $baseDeDonnees->prepare($MESSAGE_SQL_AJOUTER_UTILISATEUR);
         $requetteAjouterUtilisateur->bindParam(':pseudo', $pseudo, PDO::PARAM_STR);
         $requetteAjouterUtilisateur->bindParam(':courriel', $courriel, PDO::PARAM_STR);

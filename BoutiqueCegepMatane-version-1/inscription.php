@@ -38,7 +38,10 @@
         
         // s'il n'y a pas d'erreur avant l'envoi
         if(empty($erreurs)==true) {
+
+            //print_r(" mot de passe  : ".$utilisateur->getMotDePasse());
             $utilisateur->setMotDePasse(password_hash($utilisateur->getMotDePasse(), PASSWORD_DEFAULT));
+            //print_r(" | mot de passe crypte dans utilisateur: ".$utilisateur->getMotDePasse());
             $erreurs[]= UtilisateurDAO::ajouterUtilisateur($utilisateur); // on exécute la fonction ajouterUtilisateur
             
             // On vérifie qu'il n'y a pas d'erreurs
