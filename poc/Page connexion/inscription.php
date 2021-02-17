@@ -36,15 +36,14 @@
         }
         // s'il n'y a pas d'erreur avant l'envoi
         if(empty($erreurs)==true) {
+            $utilisateur->setMotDePasse(password_hash($utilisateur->getMotDePasse(), PASSWORD_DEFAULT));
             
-            
-            //$utilisateur = new Utilisateur(null,$pseudo,$courriel,$motdepasseCrypte);
             $erreurs[]= UtilisateurDAO::ajouterUtilisateur($utilisateur); // on exécute la fonction ajouterUtilisateur
             
             // On vérifie qu'il n'y a pas d'erreurs
             if($erreurs[0] == false){
-                echo "succes";
                 $succes_ajout = "succès";
+                header('location:index.php');
             }else{
                 // foreach pour afficher toutes les erreurs venant de la base
                 foreach ($erreurs as $erreur){

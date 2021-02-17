@@ -1,3 +1,12 @@
+<?php
+
+session_start();
+                $_SESSION["donneesUtilisateur"] = $utilisateur;
+                $_SESSION["pseudo"] = $utilisateur->getPseudo();
+                $_SESSION["courriel"] = $utilisateur->getCourriel();
+
+
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>

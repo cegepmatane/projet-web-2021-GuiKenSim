@@ -20,40 +20,54 @@ class UtilisateurDAO{
         $requetterecupUtilisateurParPseudo->bindParam(':pseudo', $pseudo, PDO::PARAM_STR);
         $requetterecupUtilisateurParPseudo->execute();
     
-        $utilisateurs = $requetterecupUtilisateurParPseudo->fetch();
-        return $utilisateurs;
+        $utilisateur = $requetterecupUtilisateurParPseudo->fetch();
+        return $utilisateur;
     }
     
     public static function ajouterUtilisateur($utilisateur){
         
-        echo "pseudo : ".$utilisateur->getPseudo();
+        //echo "pseudo : ".$utilisateur->getPseudo();
         $MESSAGE_SQL_PSEUDO_EXISTANT = "SELECT pseudo FROM utilisateurs WHERE pseudo = :pseudo";
         $baseDeDonnees = BaseDeDonnees::getConnexion();
         $requetteChercherUtilisateur = $baseDeDonnees->prepare($MESSAGE_SQL_PSEUDO_EXISTANT);
         $pseudoUtilisateur = $utilisateur->getPseudo();
         $requetteChercherUtilisateur->bindParam(':pseudo', $pseudoUtilisateur, PDO::PARAM_STR);
         $requetteChercherUtilisateur->execute();
-        $utilisateur = $requetteChercherUtilisateur->fetch(PDO::FETCH_ASSOC);
+        $utilisateurExistant = $requetteChercherUtilisateur->fetch(PDO::FETCH_ASSOC);
 
-        if (isset($utilisateur) && !empty($utilisateur)){
+        if (isset($utilisateurExistant) && !empty($utilisateurExistant)){
         return "utilisateur ou pseudo déjà existant";
         }
-       /* $MESSAGE_SQL_AJOUTER_UTILISATEUR = "INSERT INTO utilisateurs ($utilisateur->getPseudo(), courriel, motdepasse) VALUES (".":pseudo".",".":courriel".",".":motdepasse".");";
-        $baseDeDonnees = BaseDeDonnees::getConnexion();
         
-        if (!filter_var($prix, FILTER_SANITIZE_NUMBER_FLOAT) === false) {
-            $requetteAjouterUtilisateur= $baseDeDonnees->prepare($MESSAGE_SQL_AJOUTER_UTILISATEUR);
-            $requetteAjouterUtilisateur->bindParam(':pseudo', $titre, PDO::PARAM_STR);
-            $requetteAjouterUtilisateur->bindParam(':courriel', $description, PDO::PARAM_STR);
-            $requetteAjouterUtilisateur->bindParam(':motdepasse', $prix, PDO::PARAM_STR);
-            $requetteAjouterUtilisateur->execute();
-            $req = pg_get_result($requetteAjouterProduits);
-            echo pg_result_error($req);
-            return false;
-          
-        } else {
-          return true;
-        }*/
+        $MESSAGE_SQL_COURRIEL_EXISTANT = "SELECT courriel FROM utilisateurs WHERE courriel = :courriel";
+        $baseDeDonnees = BaseDeDonnees::getConnexion();
+        $requetteChercherCourriel = $baseDeDonnees->prepare($MESSAGE_SQL_COURRIEL_EXISTANT);
+        $courrielUtilisateur = $utilisateur->getCourriel();
+        $requetteChercherCourriel->bindParam(':courriel', $courrielUtilisateur, PDO::PARAM_STR);
+        $requetteChercherCourriel->execute();
+        $courrielExistant = $requetteChercherCourriel->fetch(PDO::FETCH_ASSOC);
+
+        if (isset($courrielExistant) && !empty($courrielExistant)){
+        return "courriel déjà existant";
+        }
+        
+        
+        
+        $MESSAGE_SQL_AJOUTER_UTILISATEUR = "INSERT INTO utilisateurs (pseudo, courriel, motdepasse) VALUES (".":pseudo".",".":courriel".",".":motdepasse".");";
+        $baseDeDonnees = BaseDeDonnees::getConnexion();
+        $pseudo = $utilisateur->getPseudo();
+        $courriel = $utilisateur->getCourriel();
+        $motdepasse = $utilisateur->getMotDePasse();
+        print_r($pseudo.$motdepasse.$courriel);
+        $requetteAjouterUtilisateur= $baseDeDonnees->prepare($MESSAGE_SQL_AJOUTER_UTILISATEUR);
+        $requetteAjouterUtilisateur->bindParam(':pseudo', $pseudo, PDO::PARAM_STR);
+        $requetteAjouterUtilisateur->bindParam(':courriel', $courriel, PDO::PARAM_STR);
+        $requetteAjouterUtilisateur->bindParam(':motdepasse', $motdepasse, PDO::PARAM_STR);
+        $requetteAjouterUtilisateur->execute();
+        $req = pg_get_result($requetteAjouterUtilisateur);
+        echo pg_result_error($req);
+        return false;
+
         
     }
 
