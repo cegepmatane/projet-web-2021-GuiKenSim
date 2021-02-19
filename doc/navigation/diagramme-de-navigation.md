@@ -1,6 +1,6 @@
 # Diagramme de Navigation
 ## Navigation :
-![](https://share.balsamiq.com/c/5hxrfzNzuiWqcd5kf7Qx5K.png)
+![](https://github.com/cegepmatane/projet-web-2021-GuiKenSim/blob/master/doc/navigation/diagramme-de-navigation.png)
 
 ### Version éditable :
-- Diagramme de Navigation https://balsamiq.cloud/snlsapa/pni31a2
+- Diagramme de Navigation https://balsamiq.cloud/sx9cj8d/p2il1al/r2278
