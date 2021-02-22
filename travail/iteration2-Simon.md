@@ -20,9 +20,9 @@ Page d'inscription https://github.com/cegepmatane/projet-web-2021-GuiKenSim/issu
 - Fusion avec le code principal : 30min
 # Faire la page profil
 - Maquette page profil : 30min
-- Coder la maquette : x
+- Coder la maquette : 1h
 - Changement de mot de passe : x
-- Changement de courriel ou/et de nom d'utilisateur : x
+- Changement de courriel ou/et de nom d'utilisateur : 3h
 
 
-## Total : 21 heures
+## Total : 25 heures
