@@ -47,6 +47,13 @@
             // On vérifie qu'il n'y a pas d'erreurs
             if($erreurs[0] == false){
                 $succes_ajout = "succès";
+                $to      = $utilisateur->getCourriel();
+                $subject = "Bienvenue à boutiquecegepmatane";
+                $message = "Bonjour ".$utilisateur->getPseudo().",\r\n Merci de vous être inscrit sur la boutique du cégep !";
+                $headers = "From: boutiquecegep@vps-12cf53d3.vps.ovh.ca" . "\r\n".
+                "Reply-To: boutiquecegep@vps-12cf53d3.vps.ovh.ca" . "\r\n" .
+                "X-Mailer: PHP/" . phpversion();
+                $succes = mail($to, $subject, $message, $headers);
                 header('location:index.php');
             }else{
                 // foreach pour afficher toutes les erreurs venant de la base
