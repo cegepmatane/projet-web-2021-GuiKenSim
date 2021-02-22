@@ -1,55 +1,10 @@
 <?php
 
-$tableau = [
-    [
-    "id" => 1,
-    "date" => "15/02/2021",
-    "prix" => "223.33$",
-    "facture" => "facture_15-02-2021_11_1"
-],
-    [
-    "id" => 2,
-    "date" => "15/02/2021",
-    "prix" => "223$",
-    "facture" => "facture_15-02-2021_11_2"
-],
-    [
-    "id" => 3,
-    "date" => "15/02/2021",
-    "prix" => "22$",
-    "facture" => "facture_15-02-2021_11_3"
-],
-    [
-    "id" => 4,
-    "date" => "16/02/2021",
-    "prix" => "2$",
-    "facture" => "facture_15-02-2021_11_4"
-],
-    [
-    "id" => 5,
-    "date" => "23/02/2021",
-    "prix" => "22$",
-    "facture" => "facture_15-02-2021_11_5"
-],
-    [
-    "id" => 6,
-    "date" => "23/02/2021",
-    "prix" => "22$",
-    "facture" => "facture_15-02-2021_11_6"
-],
-    [
-    "id" => 7,
-    "date" => "23/02/2021",
-    "prix" => "22$",
-    "facture" => "facture_15-02-2021_11_7"
-],
-    [
-    "id" => 8,
-    "date" => "23/02/2021",
-    "prix" => "22$",
-    "facture" => "facture_15-02-2021_11_8"
-    ]
-];
+require "accesseur/TransactionDAO.php";
+$pseudoUtilisateursession = $_SESSION['utilisateur']->getPseudo();
+
+$listeTransaction = TransactionDAO::listerTransactionParPseudo($pseudoUtilisateursession);
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -61,7 +16,6 @@ $tableau = [
 	<link rel="stylesheet" href="decoration/historique-transaction.css">
 </head>
 <body>
-	<?php include 'menu.php' ?>
 
     <div class="contenu-page-transaction">
         <div class="contenu-titre">
@@ -78,14 +32,14 @@ $tableau = [
                 </tr>
 
             <?php
-            foreach($tableau as $transaction)
+            foreach($listeTransaction as $transaction)
             {    
             ?>
                 <tr>
-                    <td><?=$transaction["id"]?></td>
-                    <td><?=$transaction["date"]?></td>
-                    <td><?=$transaction["prix"]?></td>
-                    <td><a href="#"><?=$transaction["facture"]?></a></td>
+                    <td><?=$transaction->getId()?></td>
+                    <td><?=$transaction->getdate()?></td>
+                    <td><?=$transaction->getPrix()?></td>
+                    <td><a href="#"><?=$transaction->getNom_facture()?></a></td>
                 </tr> 
                 <?php
                 }
@@ -94,8 +48,6 @@ $tableau = [
         </div>
         
     </div>
-    
-    <?php include 'footer.php' ?>
 
 </body>
 </html>
