@@ -18,7 +18,7 @@
 	<title> Boutique du Cégep de Matane </title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="./Decoration/paiement.css">
+	<link rel="stylesheet" href="./decoration/paiement.css">
 </head>
 
 <body class="page_paiement">
@@ -28,7 +28,7 @@
 		<div class="informations-commande">
 			<div class="titre-logo">
 				<h1 class="titre-commande"> Commande </h1>
-				<img class="logo-commande" src="./Ressources/images/logo-caddie.png">
+				<img class="logo-commande" src="./ressources/images/logo-caddie.png">
 			</div>
 			<ul class="liste-commande">
 				<li class="element-liste"> Produit :  <?=$titre?> </li>
@@ -38,9 +38,9 @@
 				<li class="element-liste"> Total TTC :  <?=round($prixTTC, 2)?> $ </li>
 			</ul>
 			<form class="transaction-produit" action="https://www.paypal.com/cgi-bin/webscr" method="POST" target="_new">
-				<input type="hidden" name="amount" value="<?=$prixTTC?>">	
+				<input type="hidden" name="amount" value="0.01">	
 				<input type="hidden" name="currency_code" value="CAD">
-				<input type="hidden" name="business" value="dalbignacguillaume@gmail.com">
+				<input type="hidden" name="business" value="simon.delarue2@gmail.com">
 				<input type="hidden" name="item_name" value="<?=$titre?>">	
 
 				<input type="hidden" name="lc" value="en">
@@ -58,7 +58,7 @@
 		<div class="informations-client">
 			<div class="titre-logo-client">
 				<h1 class="titre-client"> Informations Client </h1>
-				<img class="logo-info" src="./Ressources/images/logo-info.png">
+				<img class="logo-info" src="./ressources/images/logo-info.png">
 			</div>
 			<ul class="liste-client">
 				<li class="element-liste-client"> Nom :  <?=$nomClient?> </li>

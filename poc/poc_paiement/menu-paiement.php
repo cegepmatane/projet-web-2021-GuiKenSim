@@ -4,12 +4,12 @@
 	<title> Boutique du Cégep de Matane </title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="./Decoration/menu-paiement.css">
+	<link rel="stylesheet" href="./decoration/menu-paiement.css">
 </head>
 <body>
 	<header class="menu">
     	<div class="logo-menu">    
-	        <a href="index.php"><img src="./Ressources/images/logo_cegep.png" alt="Logo Cégep Matane"/></a>	        
+	        <a href="index.php"><img src="./ressources/images/logo_cegep.png" alt="Logo Cégep Matane"/></a>	        
     	</div>
     	<h1 class="titre-page-paiement"> Détails de la commande </h1>
         <div class="menu-navigation">
