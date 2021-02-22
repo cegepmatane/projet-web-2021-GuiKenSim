@@ -36,7 +36,8 @@
                 }
                 else{
                     $utilisateur->setCourriel($utilisateurRecupere['courriel']);
-                    $utilisateur->setMotDePasse($utilisateurRecupere['motdepasse']); 
+                    $utilisateur->setMotDePasse($utilisateurRecupere['motdepasse']);
+                    $utilisateur->setId($utilisateurRecupere['id']);
                 }
             } 
  

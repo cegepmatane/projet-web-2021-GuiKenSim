@@ -63,6 +63,51 @@ class UtilisateurDAO{
 
         
     }
+    public static function modifierUtilisateur($utilisateur,$pseudo){
+        
+        //echo "pseudo : ".$utilisateur->getPseudo();
+        $MESSAGE_SQL_PSEUDO_EXISTANT = "UPDATE utilisateurs SET pseudo= :pseudo,courriel= :courriel, WHERE pseudo = :ancienPseudo";
+        $baseDeDonnees = BaseDeDonnees::getConnexion();
+        $requetteChercherUtilisateur = $baseDeDonnees->prepare($MESSAGE_SQL_PSEUDO_EXISTANT);
+        $pseudoUtilisateur = $utilisateur->getPseudo();
+        $requetteChercherUtilisateur->bindParam(':pseudo', $pseudoUtilisateur, PDO::PARAM_STR);
+        $requetteChercherUtilisateur->execute();
+        $utilisateurExistant = $requetteChercherUtilisateur->fetch(PDO::FETCH_ASSOC);
+
+        if (isset($utilisateurExistant) && !empty($utilisateurExistant)){
+        return "utilisateur ou pseudo déjà existant";
+        }
+        
+        $MESSAGE_SQL_COURRIEL_EXISTANT = "SELECT courriel FROM utilisateurs WHERE courriel = :courriel";
+        $baseDeDonnees = BaseDeDonnees::getConnexion();
+        $requetteChercherCourriel = $baseDeDonnees->prepare($MESSAGE_SQL_COURRIEL_EXISTANT);
+        $courrielUtilisateur = $utilisateur->getCourriel();
+        $requetteChercherCourriel->bindParam(':courriel', $courrielUtilisateur, PDO::PARAM_STR);
+        $requetteChercherCourriel->execute();
+        $courrielExistant = $requetteChercherCourriel->fetch(PDO::FETCH_ASSOC);
+
+        if (isset($courrielExistant) && !empty($courrielExistant)){
+        return "courriel déjà existant";
+        }
+        
+        
+        
+        $MESSAGE_SQL_AJOUTER_UTILISATEUR = "INSERT INTO utilisateurs (pseudo, courriel, motdepasse) VALUES (".":pseudo".",".":courriel".",".":motdepasse".");";
+        $baseDeDonnees = BaseDeDonnees::getConnexion();
+        $pseudo = $utilisateur->getPseudo();
+        $courriel = $utilisateur->getCourriel();
+        $motdepasse = $utilisateur->getMotDePasse();
+        $requetteAjouterUtilisateur= $baseDeDonnees->prepare($MESSAGE_SQL_AJOUTER_UTILISATEUR);
+        $requetteAjouterUtilisateur->bindParam(':pseudo', $pseudo, PDO::PARAM_STR);
+        $requetteAjouterUtilisateur->bindParam(':courriel', $courriel, PDO::PARAM_STR);
+        $requetteAjouterUtilisateur->bindParam(':motdepasse', $motdepasse, PDO::PARAM_STR);
+        $requetteAjouterUtilisateur->execute();
+        $req = pg_get_result($requetteAjouterUtilisateur);
+        echo pg_result_error($req);
+        return false;
+
+        
+    }
 
 }
 ?>
