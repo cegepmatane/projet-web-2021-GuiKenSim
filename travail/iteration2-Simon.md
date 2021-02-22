@@ -18,6 +18,11 @@ Page d'inscription https://github.com/cegepmatane/projet-web-2021-GuiKenSim/issu
 - Tests page profil pour déconnexion et affichage des données : 30min
 - Ajout des sessions utilisateur dans le projet : 2h
 - Fusion avec le code principal : 30min
+# Faire la page profil
+- Maquette page profil : 30min
+- Coder la maquette : x
+- Changement de mot de passe : x
+- Changement de courriel ou/et de nom d'utilisateur : x
 
 
-## Total : 20.5 heures
+## Total : 21 heures
