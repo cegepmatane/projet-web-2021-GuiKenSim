@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="./decoration/menu-administration.css">
 </head>
 <body>
+    <?php include "verification.php"?>
 	<header class="menu">
     	<div class="logo-menu">    
 	        <a href="../index.php"><img src="../Ressources/images/logo_cegep.png" alt="Logo Cégep Matane"/></a>	        

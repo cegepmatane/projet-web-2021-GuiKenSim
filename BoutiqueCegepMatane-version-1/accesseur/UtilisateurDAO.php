@@ -116,6 +116,25 @@ class UtilisateurDAO{
 
         
     }
+    
+    public static function modifierMotDePasse($utilisateur){
+        
+        $motdepasse = $utilisateur->getMotDePasse();
+        $pseudo = $utilisateur->getPseudo();
+        // Création de la requête et bind param des arguments puis exécution
+        
+        $MESSAGE_SQL_MODIFIER_MOTDEPASSE = "UPDATE utilisateurs SET motdepasse = :motdepasse WHERE pseudo = :pseudo";
+        $baseDeDonnees = BaseDeDonnees::getConnexion();
+        $requetteModifierMotDePasse = $baseDeDonnees->prepare($MESSAGE_SQL_MODIFIER_MOTDEPASSE);
+        $requetteModifierMotDePasse->bindParam(':motdepasse', $motdepasse , PDO::PARAM_STR);
+        $requetteModifierMotDePasse->bindParam(':pseudo', $pseudo, PDO::PARAM_STR);
+        $requetteModifierMotDePasse->execute();
+        
+        $req = pg_get_result($requetteModifierMotDePasse);
+        echo pg_result_error($req);
+        return false;
+        
+    }
 
 }
 ?>

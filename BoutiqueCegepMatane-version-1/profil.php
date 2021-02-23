@@ -2,6 +2,13 @@
     require_once "./modele/Utilisateur.php";
     require "./accesseur/UtilisateurDAO.php";  
     session_start();
+    if(empty($_SESSION['utilisateur']))
+    {
+        header('location:index.php');
+    }
+
+
+
     if(isset($_POST['deconnexion']))
     {
         session_destroy();
@@ -9,11 +16,11 @@
     }
     $sessionUtilisateur = new Utilisateur($_SESSION["utilisateur"]->getId(),$_SESSION["utilisateur"]->getPseudo(),$_SESSION["utilisateur"]->getCourriel(),$_SESSION["utilisateur"]->getMotDePasse());
     $succes_pseudo_courriel = "";
-    $succes_motdepasse = "erreur les mots de passe ne correspondent pas";
+    $succes_motdepasse = "";
 
 
-
-    if(isset($_POST['BoutonChangementNomCourriel'])){ //check if form was submitted
+//----------------------------------Changement pseudo ou courriel----------------------------------
+    if(isset($_POST['BoutonChangementNomCourriel'])){
         
         // récupération des variables + les mettres dans un objet utilisateurs
         $pseudo = $_REQUEST['pseudo'];
@@ -51,7 +58,6 @@
             
         
         
-        
         // s'il n'y a pas d'erreur avant l'envoi
         if(empty($erreurs)==true) {
             
@@ -74,6 +80,67 @@
         }else{
             foreach ($erreurs as $erreur){
                     $succes_pseudo_courriel = $succes_pseudo_courriel."● erreur : ".$erreur."<br/>";
+                    echo "erreur : ".$erreur;
+                }
+        }
+   
+}
+
+//----------------------------------Changement mot de passe----------------------------------
+
+    if(isset($_POST['BoutonChangementMotdepasse'])){
+        
+        // récupération des variables + les mettres dans un objet utilisateurs
+        
+        $nouveauMotDePasse = $_REQUEST['nouveauMotDePasse'];
+        $confirmerNouveauMotDePasse = $_REQUEST['confirmerNouveauMotDePasse'];
+        $confirmerMotDePasse = $_REQUEST['ancienMotDePasse'];
+        $changementsUtilisateur = new Utilisateur($sessionUtilisateur->getId(),$sessionUtilisateur->getPseudo(),$sessionUtilisateur->getCourriel(),$nouveauMotDePasse);
+
+        $erreurs= array(); // tableau ou on stocke les erreurs
+        
+        // vérification que le mot de passe est bon
+        if (!password_verify($confirmerMotDePasse, $sessionUtilisateur->getMotDePasse())) {
+            $erreurs[]= "Le mot de passe est incorrect";
+        }
+        if (strlen($changementsUtilisateur->getMotDePasse()) < 7 ) {
+            $erreurs[]="Le mot de passe doit faire 8 caractères minimum";
+        }
+        if ($changementsUtilisateur->getMotDePasse() !== $confirmerNouveauMotDePasse) {
+            $erreurs[]="Les mots de passe ne correspondent pas";
+        }
+        
+        if(empty($changementsUtilisateur->getMotDePasse())==true) {
+            $erreurs[]="Un des champs obligatoire est vide !";
+        }
+        
+        if(is_link($changementsUtilisateur->getMotDePasse())){
+            $erreurs[]="Il ne faut pas mettre de liens dans les champs";
+        }
+
+        
+        
+        // s'il n'y a pas d'erreur avant l'envoi
+        if(empty($erreurs)==true) {
+            
+            $changementsUtilisateur->setMotDePasse(password_hash($changementsUtilisateur->getMotDePasse(), PASSWORD_DEFAULT));
+            $erreurs[]= UtilisateurDAO::modifierMotDePasse($changementsUtilisateur); // on exécute la fonction ajouterUtilisateur
+            
+            // On vérifie qu'il n'y a pas d'erreurs
+            if($erreurs[0] == false){
+                $succes_motdepasse = "succès";
+                $_SESSION["utilisateur"]->setMotDePasse($changementsUtilisateur->getMotDePasse());
+                header('location:profil.php');
+            }else{
+                // foreach pour afficher toutes les erreurs venant de la base
+                foreach ($erreurs as $erreur){
+                    $succes_motdepasse = $succes_motdepasse."● erreur : ".$erreur."<br/>";
+                }
+            }
+            
+        }else{
+            foreach ($erreurs as $erreur){
+                    $succes_motdepasse = $succes_motdepasse."● erreur : ".$erreur."<br/>";
                     echo "erreur : ".$erreur;
                 }
         }

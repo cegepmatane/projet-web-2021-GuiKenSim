@@ -1,6 +1,7 @@
 <?php
 require "./accesseur/ProduitDAO.php";
 $listeProduits = ProduitDAO::listerProduits();
+
 ?>
 
 <!DOCTYPE html>
@@ -13,7 +14,6 @@ $listeProduits = ProduitDAO::listerProduits();
 	<link rel="stylesheet" href="./decoration/administration-accueil.css">
 </head>
 <body>
-
     <?php include "menu-administration.php"?>
 
   	<ul class="magasiner-items-a-vendre">
