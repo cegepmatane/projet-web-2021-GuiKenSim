@@ -1,14 +1,14 @@
 @font-face {
   font-family: RobotoMonoItalic;
-  src: url(../Ressources/font/Roboto/Italic-VariableFont.ttf);
+  src: url(../ressources/font/Roboto/Italic-VariableFont.ttf);
 }
 @font-face {
   font-family: RobotoMono;
-  src: url(../Ressources/font/Roboto/VariableFont.ttf);
+  src: url(../ressources/font/Roboto/VariableFont.ttf);
 }
 @font-face {
   font-family: balsamiq;
-  src: url(../Ressources/font/Balsamiq.ttf);
+  src: url(../ressources/font/Balsamiq.ttf);
 }
 
 .magasiner_liste{

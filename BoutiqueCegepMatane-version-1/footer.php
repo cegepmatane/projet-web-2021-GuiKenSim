@@ -4,7 +4,7 @@
 	<title> Boutique du Cégep de Matane </title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="./Decoration/footer.css">
+	<link rel="stylesheet" href="./decoration/footer.css">
 </head>
 <body>
 	<footer class="copyright">

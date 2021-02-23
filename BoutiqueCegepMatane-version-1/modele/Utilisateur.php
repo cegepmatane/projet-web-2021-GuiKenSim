@@ -12,7 +12,6 @@ class Utilisateur{
 
         $pseudo = filter_var($pseudo,FILTER_SANITIZE_STRING);
         $courriel = filter_var($courriel,FILTER_SANITIZE_STRING);
-        $motdepasse = filter_var($motdepasse,FILTER_SANITIZE_ENCODED);
         
         $this->setId($id);
         $this->setPseudo($pseudo);

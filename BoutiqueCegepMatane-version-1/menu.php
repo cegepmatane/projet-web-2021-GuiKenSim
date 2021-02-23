@@ -7,7 +7,7 @@
     }
     else{
         $bouton_utilisateur ='<a href="profil.php" class="bouton-menu"> Profil </a>';
-        if($_SESSION["utilisateur"]->getPseudo() == "FuZzyy14" || $_SESSION["utilisateur"]->getPseudo() == "guillaume" || $_SESSION["utilisateur"]->getPseudo() == "kenny" ){
+        if($_SESSION["utilisateur"]->getPseudo() == "simon" || $_SESSION["utilisateur"]->getPseudo() == "guillaume" || $_SESSION["utilisateur"]->getPseudo() == "kenny" ){
             $bouton_administration ='<a href="./administration/administration-accueil.php" class="bouton-menu"> Administration </a>';
         }
         else{
@@ -25,12 +25,12 @@
 	<title> Boutique du Cégep de Matane </title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="./Decoration/menu.css">
+	<link rel="stylesheet" href="./decoration/menu.css">
 </head>
 <body>
 	<header class="menu">
     	<div class="logo-menu">    
-	        <a href="index.php"><img src="./Ressources/images/logo_cegep.png" alt="Logo Cégep Matane"/></a>	        
+	        <a href="index.php"><img src="./ressources/images/logo_cegep.png" alt="Logo Cégep Matane"/></a>	        
     	</div>
         <div class="menu-navigation">
 	         <a href="index.php" class="bouton-menu"> Accueil </a>
