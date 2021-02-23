@@ -8,11 +8,11 @@ Page de confirmation de paiement https://github.com/cegepmatane/projet-web-2021-
 # Faire les pages : 6h
 - Paiement : 4h30
 - Confirmation de paiement : 1h30
-# Faire la preuve de concept pour les pages de paiement : 12h
+# Faire la preuve de concept pour les pages de paiement : 13h
 - Lecture de documentation sur l'IPm de Paypal : 2h
 - Faire des test de code pour la poc : 4h
 - Faire une version finale du système pour la poc : 2h
 - Faire des test de verification du bon fonctionnement du système : 2h
-- Intégration du système sur la version final du site : 2h
+- Intégration du système sur la version final du site : 3h
 
-## Total : 20.5 heures
+## Total : 21.5 heures
