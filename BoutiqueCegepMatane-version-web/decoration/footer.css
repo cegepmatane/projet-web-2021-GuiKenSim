@@ -1,0 +1,15 @@
+@font-face {
+  font-family: balsamiq;
+  src: url(../ressources/font/Balsamiq.ttf);
+}
+
+.copyright{
+    position: absolute;
+	margin-top: 0 auto;
+	width: 98.75%;
+   	margin-bottom: 0.75em;
+	text-align: center;
+	border: 3px solid black;
+	text-align: center;
+	font-family: balsamiq;
+}
