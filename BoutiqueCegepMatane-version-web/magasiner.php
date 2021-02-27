@@ -19,13 +19,20 @@ if(empty($_SESSION['utilisateur'])){
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="./decoration/magasiner.css">
+  <script src="Js/Produit.js"></script>
+  <script src="Js/Ajax.js" defer></script>
 </head>
 <body>
 	<?php include 'menu.php' ?>
 
   	<div>
   		<h1 class="magasiner_titre"> Liste des items à vendre </h1>
-  	</div> 
+  	</div>
+    
+    <div class="barre-de-recherche-contenant">
+        <input type="text" name="barre-de-recherche" id="barre-de-recherche" placeholder="Rechercher un produit"/>
+    </div>
+
   	<ul class="magasiner_liste">
   	<?php
 
