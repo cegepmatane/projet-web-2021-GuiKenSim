@@ -1,7 +1,7 @@
 const listeAffichage = document.getElementsByClassName('magasiner_liste')[0];
 const barreDeRecherche = document.getElementById('barre-de-recherche');
 var ajax = new XMLHttpRequest( );
-let url = 'http://localhost/BoutiqueCegepMatane-version-2/listeProduitService.php';
+let url = 'https://boutiquecegepmatane.ddns.net/listeProduitService.php';
 let listeProduit = [];
 
 barreDeRecherche.addEventListener('keyup', (evenementKeyup) => {
