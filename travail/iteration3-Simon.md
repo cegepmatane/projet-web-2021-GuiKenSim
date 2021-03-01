@@ -1,6 +1,6 @@
 # POC Inscription Responsive
 - Recherche : 3h
-- Tests de code : 2h
+- Tests de code : 4h
 
 
-## Total : 5h
+## Total : 7h
