@@ -51,14 +51,23 @@
     
 }
 
+.page-inscription-msgErreur{
+    
+    color: darkred;
+    
+}
+
+.page-inscription-msgValide{
+    
+    color: green;
+    
+}
 
 .page-inscription-msgIncorrect{
     
     color: darkred;
     
 }
-
-
 .page-inscription-bouton{
     font-family: balsamiq;
 	background-color: white;

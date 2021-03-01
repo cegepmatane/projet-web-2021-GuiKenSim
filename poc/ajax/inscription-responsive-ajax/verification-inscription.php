@@ -5,8 +5,9 @@ echo '<?xml version="1.0" encoding="ISO-8859-1"?>';
 $erreurs= array();
 $valides= array();
 
-$pseudoRequete = $_REQUEST['pseudo'];
-if($pseudoRequete != ""){
+$pseudoRequete = "";
+if(isset($_POST['pseudo'])){
+	$pseudoRequete = $_REQUEST['pseudo'];
 	$utilisateurRecupere = UtilisateurDAO::recupUtilisateurParPseudo($pseudoRequete);
 	if($utilisateurRecupere != "utilisateur non existant"){
 		$erreurs[]= "Le pseudo existe déjà";
@@ -17,8 +18,9 @@ if($pseudoRequete != ""){
 
 }
 
-$courrielRequete = $_REQUEST['courriel'];
-if($courrielRequete != ""){
+$courrielRequete = "";
+if(isset($_POST['courriel'])){
+	$courrielRequete = $_REQUEST['courriel'];
 	$courrielRecupere = UtilisateurDAO::testCourrielExistant($courrielRequete);
 	if($courrielRecupere != "courriel non existant"){
 		$erreurs[]= "Le courriel existe déjà";
@@ -28,6 +30,8 @@ if($courrielRequete != ""){
 	}
 
 }
+
+
 
 ?>
 <verification>
