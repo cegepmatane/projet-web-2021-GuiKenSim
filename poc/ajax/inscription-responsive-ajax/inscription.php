@@ -139,7 +139,7 @@
                 title="Vérification du mot de passe"
                 required=true
                 />
-                <p class="page-inscription-msgIncorrect" id="messageAjax"><?php echo $succes_ajout ?></p>
+                <div class="page-inscription-message-verification" id="message-verification"><ul></ul></div>
                 <p class="page-inscription-msgIncorrect"><?php echo $succes_ajout ?></p>
                 <input type="submit" value="Inscription" class="page-inscription-bouton" name="BoutonInscription"/>
             </form>
