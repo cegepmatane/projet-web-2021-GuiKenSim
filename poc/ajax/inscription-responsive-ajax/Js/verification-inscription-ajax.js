@@ -23,10 +23,10 @@ ajax.send("pseudo="+encodeURIComponent(entreePseudoString));
 ajax.onreadystatechange = () =>{
     if(ajax.readyState == 4){
         documentXML = ajax.responseXML;
-        let tailleXML = documentXML.getElementsByTagName('erreur').length;
+        let tailleXML = documentXML.getElementsByTagName('erreurs').length;
 
         for(var i = 0; i < tailleXML; i++){
-            let messageErreur = documentXML.getElementsByTagName('messageErreur')[i].childNodes[0].nodeValue;
+            let messageErreur = documentXML.getElementsByTagName('erreur')[i].childNodes[0].nodeValue;
             erreurs.push(messageErreur);
         }
         erreurs.forEach(function() {

@@ -17,6 +17,21 @@ class UtilisateurDAO{
         }
         return $utilisateur;
     }
+
+    public static function testCourrielExistant($courriel){
+        $MESSAGE_SQL_COURRIEL_EXISTANT = "SELECT courriel FROM utilisateurs WHERE courriel=".":courriel".";";
+        $baseDeDonnees = BaseDeDonnees::getConnexion();
+        $requettetestCourrielExistant = $baseDeDonnees->prepare($MESSAGE_SQL_COURRIEL_EXISTANT);
+        $requettetestCourrielExistant->bindParam(':courriel', $courriel, PDO::PARAM_STR);
+        $requettetestCourrielExistant->execute();
+        
+        
+        $courriel = $requettetestCourrielExistant->fetch();
+        if (empty($courriel)){
+        return "courriel non existant";
+        }
+        return $courriel;
+    }
     
     public static function ajouterUtilisateur($utilisateur){
         
