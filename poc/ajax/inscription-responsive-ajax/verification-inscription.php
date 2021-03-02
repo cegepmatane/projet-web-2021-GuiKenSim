@@ -10,7 +10,7 @@ if(isset($_POST['pseudo'])){
 	$pseudoRequete = $_REQUEST['pseudo'];
 	$utilisateurRecupere = UtilisateurDAO::recupUtilisateurParPseudo($pseudoRequete);
 	if($utilisateurRecupere != "utilisateur non existant"){
-		$erreurs[]= "Le pseudo existe déjà";
+		$erreurs[]= "Le pseudo existe deja";
 	}
 	else{
 		$valides[]= "Le pseudo est disponible";
@@ -23,7 +23,7 @@ if(isset($_POST['courriel'])){
 	$courrielRequete = $_REQUEST['courriel'];
 	$courrielRecupere = UtilisateurDAO::testCourrielExistant($courrielRequete);
 	if($courrielRecupere != "courriel non existant"){
-		$erreurs[]= "Le courriel existe déjà";
+		$erreurs[]= "Le courriel existe deja";
 	}
 	else{
 		$valides[]= "Le courriel est disponible";

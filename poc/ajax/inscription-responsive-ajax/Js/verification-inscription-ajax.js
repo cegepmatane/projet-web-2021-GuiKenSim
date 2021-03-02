@@ -36,16 +36,17 @@ entreeCourriel.addEventListener('input', (evenementInput) => {
 ajax.onreadystatechange = () =>{
     if(ajax.readyState == 4){
         documentXML = ajax.responseXML;
-        let tailleXML = documentXML.getElementsByTagName('erreurs').length;
+        let tailleXMLErreurs = documentXML.getElementsByTagName('erreur').length;
+        let tailleXMLValides = documentXML.getElementsByTagName('valide').length;
         var messagesAffiches = "";
-        for(var i = 0; i < tailleXML; i++){
+        for(var i = 0; i < tailleXMLErreurs; i++){
             let messageErreur = documentXML.getElementsByTagName('erreur')[i].childNodes[0].nodeValue;
-            messagesAffiches = messagesAffiches + "<li class =\"page-inscription-msgErreur\">erreur : "+messageErreur+"</li><br/>";
+            messagesAffiches = messagesAffiches + "<li class =\"page-inscription-msgErreur\">"+messageErreur+"</li><br/>";
         }
-        tailleXML = documentXML.getElementsByTagName('valides').length;
-        for(var i = 0; i < tailleXML; i++){
+
+        for(var i = 0; i < tailleXMLValides; i++){
             let messageValide = documentXML.getElementsByTagName('valide')[i].childNodes[0].nodeValue;
-            messagesAffiches = messagesAffiches + "<li class =\"page-inscription-msgValide\">valide : "+messageValide+"</li><br/>";
+            messagesAffiches = messagesAffiches + "<li class =\"page-inscription-msgValide\">"+messageValide+"</li><br/>";
         }
 
         messageAAfficher.innerHTML = messagesAffiches; 
