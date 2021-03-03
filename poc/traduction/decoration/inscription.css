@@ -1,0 +1,75 @@
+@font-face {
+  font-family: balsamiq;
+  src: url(../ressources/font/Balsamiq.ttf);
+}
+
+.page-inscription{
+	font-family: balsamiq;
+}
+
+.accueil{
+	display: block;
+	text-align: center;
+	padding-top: 4.3%;
+}
+
+.titre-page{
+	padding-bottom: 1%;
+}
+
+.boite-decoration{
+    margin: auto;
+    margin-bottom: 7.5%;
+    background: #2779b8;
+    border-color: black;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 25px;
+    padding: 1%;
+    padding-top: 2%;
+    width: 25%;
+    
+
+}
+
+.page-inscription-formulaire{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+}
+
+.page-inscription-formulaire-input{
+    margin-top: 1%;
+    margin-bottom: 2%;
+    width: 75%;
+    height: 100%;
+    align-self: center;
+    border-color: black;
+    box-shadow: 1px 1px;
+    border-radius: 3px;
+    
+}
+
+
+.page-inscription-msgIncorrect{
+    
+    color: darkred;
+    
+}
+
+
+.page-inscription-bouton{
+    font-family: balsamiq;
+	background-color: white;
+	color: black;
+	border: 2px solid black;
+	font-size: 0.8em;
+    box-shadow: 2px 2px 2px black;
+    
+    margin-top: 2%;
+	padding: 0.5em;
+    width: 40%;
+    align-self: flex-end;
+	
+}

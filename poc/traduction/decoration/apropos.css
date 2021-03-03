@@ -1,0 +1,24 @@
+@font-face {
+  font-family: balsamiq;
+  src: url(../ressources/font/Balsamiq.ttf);
+}
+
+.page_apropos{
+	font-family: balsamiq;
+}
+
+.apropos{
+	display: block;
+	text-align: center;
+	padding-top: 5em;
+	margin-bottom: 6em;
+}
+
+.titre_aporpos{
+	padding-bottom: 1em;
+}
+
+.texte_apropos{
+	margin-left: 25%;
+	margin-right: 25%
+}

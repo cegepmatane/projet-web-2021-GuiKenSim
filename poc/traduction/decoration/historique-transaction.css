@@ -1,0 +1,33 @@
+.contenu-page-transaction{
+    display: flex;
+    width: 100%;
+    height: 70vh;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tableau
+{
+    border-collapse: collapse;
+}
+
+.titre-colonne th{
+    background: gray;
+}
+
+td, th 
+{
+    border: 1px solid black;
+    text-align: center;
+    font-size: x-large;
+}
+
+tr:nth-child(even) 
+{
+    background: #CCC
+}
+
+tr:nth-child(odd) 
+{
+    background: #FFF
+}

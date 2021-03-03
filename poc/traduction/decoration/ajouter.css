@@ -1,0 +1,15 @@
+@font-face {
+  font-family: balsamiq;
+  src: url(../ressources/font/Balsamiq.ttf);
+}
+
+.body {
+    font-family: balsamiq;    
+}
+
+.div_produit_ajouter{
+	margin-left: 25%;
+	margin-right: 25%;
+	margin-top: 25%;
+	text-align: center;
+}

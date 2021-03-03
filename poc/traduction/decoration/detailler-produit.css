@@ -1,0 +1,42 @@
+@font-face {
+  font-family: balsamiq;
+  src: url(../Ressources/font/Balsamiq.ttf);
+}
+
+.contenu{
+    font-family: balsamiq;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contenu-image{
+    width: 30%;
+    height: 30%;
+    margin-top: 2%;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+.contenu-detailler{
+    width: 70%;
+    height: 30%;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+}
+
+p{
+    width: 50%;
+    text-align: justify;
+}
+
+.bouton-acheter-produit{
+    width: 20%;
+    margin-top: 2%;
+    margin-left: 30%;
+}
