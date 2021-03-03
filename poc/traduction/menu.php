@@ -1,13 +1,11 @@
 <?php
     require_once "./modele/Utilisateur.php";
-
-    $langue = "fr";
     
     if(!isset($_SESSION)){
         session_start();
     }
     //session_sart();
-    if(empty($_SESSION)){
+    if(empty($_SESSION["utilisateur"])){
         $bouton_utilisateur ='<a href="connexion.php" class="bouton-menu"> Connexion </a>';
         $bouton_administration ="";
     }
@@ -19,41 +17,33 @@
         else{
             $bouton_administration ="";
         }
-    }    
+    }  
 
-    if($_POST['bouton_langue'] == "fr") { 
-        print_r("FR choisi");
-        $locale = "fr_CA.UTF-8"; 
-
-        $racine = "./locale";
-        $domaine = "messages";
-
-        putenv('LC_ALL='.$locale);
-        setlocale(LC_ALL, $locale);
-
-        bindtextdomain($domaine, $racine);
-        textdomain($domaine);
-
-        $langue = "en";
-    } 
-    if($_POST['bouton_langue'] == "en") { 
-        print_r("EN choisi");
+    $racine = "./locale";
+    $domaine = "messages";
+    //$_SESSION["langue"] = "fr";
+         
+    if($_SESSION["langue"] == "en") { 
+        //print_r("FR choisi");
         $locale = "en_CA.UTF-8"; 
-
-        $racine = "./locale";
-        $domaine = "messages";
-
         putenv('LC_ALL='.$locale);
         setlocale(LC_ALL, $locale);
-
         bindtextdomain($domaine, $racine);
         textdomain($domaine);
 
-        $langue = "fr";
-    } 
-    
-?>
+        $_SESSION["langue"] = "fr";        
+    }
+    else { 
+         //print_r("EN choisi");
+         $locale = "fr_CA.UTF-8"; 
+         putenv('LC_ALL='.$locale);
+         setlocale(LC_ALL, $locale);
+         bindtextdomain($domaine, $racine);
+         textdomain($domaine);
 
+         $_SESSION["langue"] = "en";                   
+    }   
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -75,9 +65,8 @@
              <?php echo $bouton_utilisateur ?>
              
              <form method="post"> 
-                <input type="submit" name="bouton_langue" class="button" value="<?=$langue?>"/>                 
+                <input type="submit" name="fr" class="button_langue" value="<?=$_SESSION["langue"]?>"/>           
              </form> 
-
         </div>
   	</header>
 </body>

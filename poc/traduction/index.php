@@ -1,16 +1,3 @@
-<?php
-/*
-$locale = "en_CA.UTF-8"; 
-
-$racine = "./locale";
-$domaine = "messages";
-
-putenv('LC_ALL='.$locale);
-setlocale(LC_ALL, $locale);
-
-bindtextdomain($domaine, $racine);
-textdomain($domaine);*/
-?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
