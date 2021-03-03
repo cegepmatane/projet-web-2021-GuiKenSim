@@ -28,11 +28,11 @@ if(empty($_SESSION['utilisateur'])){
   	<div>
   		<h1 class="magasiner_titre"> Liste des items à vendre </h1>
   	</div>
-    
+
     <div class="barre-de-recherche-contenant">
         <input type="text" name="barre-de-recherche" id="barre-de-recherche" placeholder="Rechercher un produit"/>
     </div>
-
+    
   	<ul class="magasiner_liste">
   	<?php
 

@@ -14,6 +14,9 @@
         if (!preg_match("/^[a-zA-Z-0-9-' ]*$/",$utilisateur->getPseudo())) {
           $erreurs[]="Seulement des lettres, chiffres et espaces sont autorisés";
         }
+        if (strlen($utilisateur->getPseudo()) < 5 ) {
+            $erreurs[]="Le pseudo doit faire 6 caractères minimum";
+        }
         if (strlen($utilisateur->getMotDePasse()) < 7 ) {
             $erreurs[]="Le mot de passe doit faire 8 caractères minimum";
         }
@@ -65,7 +68,7 @@
         }else{
             foreach ($erreurs as $erreur){
                     $succes_ajout = $succes_ajout."● erreur : ".$erreur."<br/>";
-                    echo "erreur : ".$erreur;
+                    //echo "erreur : ".$erreur;
                 }
         }
         // Tuto pour les forms https://magemastery.net/courses/user-registration-with-php-mysql/form-validation
@@ -86,6 +89,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="./decoration/inscription.css">
+    <script src="Js/verification-inscription-ajax.js" defer></script>
 </head>
 
 <body class="page-inscription">
@@ -102,6 +106,7 @@
                     name="pseudo"
                     autocomplete="off"    
                     class="page-inscription-formulaire-input"
+                    id="pseudo"
                     title="nom d'utilisateur"
                     required=true
                 />
@@ -113,6 +118,7 @@
                 type = "text"
                 autocomplete="off" 
                 class="page-inscription-formulaire-input"
+                id="courriel"
                 title="adresse courriel"
                 required=true
                 />
@@ -136,8 +142,9 @@
                 title="Vérification du mot de passe"
                 required=true
                 />
+                <div id="message-verification"><ul></ul></div>
                 <p class="page-inscription-msgIncorrect"><?php echo $succes_ajout ?></p>
-                <input type="submit" value="Inscription" class="page-inscription-bouton" name="BoutonInscription"/>
+                <input type="submit" value="Inscription" class="page-inscription-bouton" name="BoutonInscription" id="boutonInscription" disabled/>
             </form>
             
         </div>

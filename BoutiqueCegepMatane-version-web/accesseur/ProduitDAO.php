@@ -70,4 +70,3 @@ class ProduitDAO{
         $requetteSupprimerProduit->execute();
     }
 }
-?>

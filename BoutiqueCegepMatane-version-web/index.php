@@ -8,6 +8,7 @@
 </head>
 
 <body class="page_accueil">
+
 	<?php include 'menu.php' ?>
 
   	<div class="accueil">

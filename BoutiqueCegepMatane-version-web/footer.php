@@ -9,7 +9,7 @@
 <body>
 	<footer class="copyright">
   		<div>
-  			<p> © Tous droits réservés - Site développé par Kenny Maréchal, Simon Delarue et Guillaume d'Albignac </p>
+  			<p> © Tous droits réservés - Site développé par Kenny Marechal, Simon Delarue et Guillaume d'Albignac </p>
   		</div>  		
   	</footer>
 </body>

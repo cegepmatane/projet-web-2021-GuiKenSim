@@ -7,15 +7,13 @@ let listeProduit = [];
 barreDeRecherche.addEventListener('keyup', (evenementKeyup) => {
 
     const rechercheString = evenementKeyup.target.value.toLowerCase();
-    console.log(rechercheString);
 
-    const filtreProduit = listeProduit.filter((produit) => {
+    const filtreProduits = listeProduit.filter((produit) => {
         return (
             produit.titre.toLowerCase().includes(rechercheString)
         );
     });
-    console.log(filtreProduit);
-    afficherProduitRechercher(filtreProduit);
+    afficherProduitRechercher(filtreProduits);
 });
 
 ajax.open('GET', url, true);
@@ -39,9 +37,15 @@ ajax.onreadystatechange = () =>{
 ajax.send('');
 
 const afficherProduitRechercher = (produits) =>{
-    const string = produits
-    .map((produit) => {
-        return `<li class="magasiner_items">
+    const vide = 0;
+    if(produits.length === vide){
+        const stringVide = `<h2>Si tu ne sais pas l'écrire cherche le dans la liste :-)</h2>`;
+        listeAffichage.innerHTML = stringVide;
+    }
+else{
+    const string = produits.map((produit) => {
+        return `
+        <li class="magasiner_items">
         <div class="magasiner_div_image_cliquable">
             <a href="detailler-produit.php?id=${produit.id}" title = "appuyez pour le détail" class="magasiner_image_cliquable">
                 <img src="./ressources/images/${produit.image}"  alt="logo-item" class="magasiner_image_cliquable">
@@ -53,9 +57,9 @@ const afficherProduitRechercher = (produits) =>{
         <form class="acheter-produit" action="paiement.php" method="POST" enctype="multipart/form-data">
           <input type="hidden" name="titre" value="${produit.titre}" />
           <input type="hidden" name="prix" value="${produit.prix}" />
-          <input type="submit" value="Acheter"> 
-        </form>
-    </li>`;
+          <input type="submit" value="Acheter"/>
+        </li>`;
     }).join('');
-    listeAffichage.innerHTML = string;
+
+    listeAffichage.innerHTML = string;}
 }
