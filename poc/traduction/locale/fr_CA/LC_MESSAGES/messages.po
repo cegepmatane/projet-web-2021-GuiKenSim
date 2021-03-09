@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2021-03-03 09:17-0500\n"
-"PO-Revision-Date: 2021-03-03 09:18-0500\n"
+"POT-Creation-Date: 2021-03-05 09:36-0500\n"
+"PO-Revision-Date: 2021-03-05 09:39-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_CA\n"
@@ -12,35 +12,160 @@ msgstr ""
 "X-Generator: Poedit 2.4.2\n"
 "X-Poedit-Basepath: ../../../..\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-KeywordsList: __\n"
+"X-Poedit-SearchPath-0: apropos.php\n"
+"X-Poedit-SearchPath-1: connexion.php\n"
+"X-Poedit-SearchPath-2: detailler-produit.php\n"
+"X-Poedit-SearchPath-3: footer.php\n"
+"X-Poedit-SearchPath-4: historique-transaction.php\n"
+"X-Poedit-SearchPath-5: index.php\n"
+"X-Poedit-SearchPath-6: inscription.php\n"
+"X-Poedit-SearchPath-7: magasiner.php\n"
+"X-Poedit-SearchPath-8: menu.php\n"
+"X-Poedit-SearchPath-9: paiement.php\n"
+"X-Poedit-SearchPath-10: profil.php\n"
 
-#: footer.php:4 index.php:16 menu.php:26
+#: apropos.php:4 connexion.php:76 detailler-produit.php:10 footer.php:4
+#: historique-transaction.php:12 index.php:4 inscription.php:88
+#: magasiner.php:17 menu.php:26 paiement.php:19 profil.php:166
 msgid "Boutique du Cégep de Matane"
 msgstr "Boutique de Matane Cégep"
 
+#: apropos.php:14
+msgid "À propos de nous !"
+msgstr "À Propos de nous !"
+
+#: apropos.php:16
+msgid ""
+"Nous sommes 3 étudiants en DEC Techniques de l'informatique au Cégep de "
+"Matane. Notre but ?"
+msgstr ""
+"Nous sommes 3 étudiants en DEC Techniques de l'informatique au Cégep de "
+"Matane. Notre but ?"
+
+#: apropos.php:18
+msgid ""
+"Permettre aux nouveaux étudiants de s'équiper selon leurs besoins : chaque "
+"fois que l'on part du domicile familial\n"
+"  \t\tc'est un petit pincement au coeur ! Mais si l'on pouvait vous aider à "
+"vous sentir mieux chez vous, ne serait pas une bonne chose ? C'est pourquoi "
+"nous avons mis en oeuvre ce site."
+msgstr ""
+"Permettre aux nouveaux étudiants de s'équiper selon leurs besoins : chaque "
+"fois que l'on part du domicile familial\n"
+"  \t\tc'est un petit pincement au coeur ! Mais si l'on pouvait vous aider à "
+"vous sentir mieux chez vous, ne serait pas une bonne chose ? C'est pourquoi "
+"nous avons mis en oeuvre ce site."
+
+#: apropos.php:21
+msgid ""
+"Sur ce site vous trouverez aussi bien de quoi équiper votre chez vous que "
+"vous-même. Que ce soit une cafetière pour vous servir un bon café bien chaud "
+"lors des longues nuits d'hiver, ou bien un magnifique manteau du capitaine "
+"afin de défier les intempéries, ou encore une superbe serviette à l'effigie "
+"de votre école préférée. Nous avons quasiment tout ce dont vous pourriez "
+"avoir besoin pendant vos années d'études. Donc n'attendez plus et commander "
+"sur la boutique du Cégep de Matane !"
+msgstr ""
+"Sur ce site vous trouverez aussi bien de quoi équiper votre chez vous que "
+"vous-même. Que ce soit une cafetière pour vous servir un bon café bien chaud "
+"lors des longues nuits d'hiver, ou bien un magnifique manteau du capitaine "
+"afin de défier les intempéries, ou encore une superbe serviette à l'effigie "
+"de votre école préférée. Nous avons quasiment tout ce dont vous pourriez "
+"avoir besoin pendant vos années d'études. Donc n'attendez plus et commander "
+"sur la boutique du Cégep de Matane !"
+
+#: connexion.php:86
+msgid "Connexion à la boutique"
+msgstr "Connexion à la boutique"
+
+#: connexion.php:90 inscription.php:102 profil.php:178
+msgid "Nom d'utilisateur:"
+msgstr "Nom d'utilisateur:"
+
+#: connexion.php:100 inscription.php:126 profil.php:202
+msgid "Mot de passe :"
+msgstr "Mot de passe :"
+
+#: connexion.php:109
+msgid "Nouveau client ? Cliquez-ici"
+msgstr "Nouveau client ? Cliquez-ici"
+
+#: detailler-produit.php:25
+msgid "Descriptif du produit"
+msgstr "Descriptif du produit"
+
+#: detailler-produit.php:27 magasiner.php:50
+msgid "Prix :"
+msgstr "Prix :"
+
 #: footer.php:12
 msgid ""
-"© Tous droits réservés - Site développé par Kenny Maréchal, Simon Delarue et "
+"© Tous droits réservés - Site développé par Kenny Marechal, Simon Delarue et "
 "Guillaume d'Albignac"
 msgstr ""
-"© Tous droits réservés - Site développé par Kenny Maréchal, Simon Delarue et "
-"Guillaume d’Albignac"
+"© Tous droits réservés - Site développé par Kenny Marechal, Simon Delarue et "
+"Guillaume d'Albignac"
 
-#: index.php:27
+#: historique-transaction.php:22
+msgid "Mon Historique de transaction"
+msgstr "Mon Historique de transaction"
+
+#: historique-transaction.php:25
+msgid "Mes Achats"
+msgstr "Mes Achats"
+
+#: historique-transaction.php:28
+msgid "Numéro de Commande"
+msgstr "Numéro de Commande"
+
+#: historique-transaction.php:29
+msgid "Date de transaction"
+msgstr "Date de transaction"
+
+#: historique-transaction.php:30
+msgid "Prix"
+msgstr "Prix"
+
+#: historique-transaction.php:31
+msgid "Facture"
+msgstr "Facture"
+
+#: index.php:15
 msgid ""
 "Bienvenue sur la boutique en ligne du Cégep de Matane ! Cliquez sur "
-"MAGASINER pour commencer. "
+"MAGASINER pour commencer."
 msgstr ""
-"Bienvenue à la boutique en ligne du Cégep de Matane! Cliquez sur MAGASINER "
-"pour commencer. "
+"Bienvenue sur la boutique en ligne du Cégep de Matane ! Cliquez sur "
+"MAGASINER pour commencer."
 
-#: index.php:28
+#: index.php:16
 msgid "MAGASINER"
-msgstr "Magasinez"
+msgstr "MAGASINER"
 
-#: index.php:30 menu.php:40
+#: index.php:18 menu.php:40
 msgid "À Propos de nous"
 msgstr "À Propos de nous"
+
+#: inscription.php:98
+msgid "Inscription à la boutique"
+msgstr "Inscription à la boutique"
+
+#: inscription.php:114 profil.php:190
+msgid "Adresse courriel :"
+msgstr "Adresse courriel :"
+
+#: inscription.php:136
+msgid "Vérifier le mot de passe :"
+msgstr "Vérifier le mot de passe :"
+
+#: magasiner.php:29
+msgid "Liste des items à vendre"
+msgstr "Liste des items à vendre"
+
+#: magasiner.php:50
+msgid "n° article :"
+msgstr "n° article :"
 
 #: menu.php:37
 msgid "Accueil"
@@ -49,3 +174,55 @@ msgstr "Accueil"
 #: menu.php:38
 msgid "Magasiner"
 msgstr "Magasiner"
+
+#: paiement.php:31
+msgid "Commande"
+msgstr "Commande"
+
+#: paiement.php:35
+msgid "Produit : "
+msgstr "Produit : "
+
+#: paiement.php:36
+msgid "Prix : "
+msgstr "Prix : "
+
+#: paiement.php:37
+msgid "Quantité :  1 "
+msgstr "Quantité :  1 "
+
+#: paiement.php:39
+msgid "Total TTC : "
+msgstr "Total TTC : "
+
+#: paiement.php:61
+msgid "Informations Client"
+msgstr "Informations Client"
+
+#: paiement.php:65
+msgid "Pseudo : "
+msgstr "Pseudo : "
+
+#: paiement.php:66
+msgid "Courriel : "
+msgstr "Courriel : "
+
+#: profil.php:176
+msgid "Modifier les informations de profil"
+msgstr "Modifier les informations de profil"
+
+#: profil.php:220
+msgid "Changer le mot de passe"
+msgstr "Changer le mot de passe"
+
+#: profil.php:222
+msgid "Ancien mot de passe :"
+msgstr "Ancien mot de passe :"
+
+#: profil.php:233
+msgid "Nouveau mot de passe :"
+msgstr "Nouveau mot de passe :"
+
+#: profil.php:244
+msgid "Confirmer le mot de passe :"
+msgstr "Confirmer le mot de passe :"

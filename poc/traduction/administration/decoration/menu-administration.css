@@ -1,0 +1,38 @@
+@font-face {
+  font-family: balsamiq;
+  src: url(../ressources/font/Balsamiq.ttf);
+}
+
+a{
+    text-decoration: none;
+}
+
+.menu{
+	font-family: balsamiq;
+	width: 98.75%;
+	border: 3px solid black;
+	border-radius: 3px 3px 3px 3px;
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.menu-navigation{
+	width: 50%;
+	height: 40%;
+	display: flex;
+	justify-content: space-around;
+	justify-content: flex-end;
+}
+
+.bouton-menu{
+	width: 30%;
+	height: 50%;
+	display: flex;
+	background-color: #ffff;
+    margin: 1%;
+    border: 2px solid black;
+    color: black;
+    box-shadow: 2px 2px 2px black;
+	justify-content: center;
+}

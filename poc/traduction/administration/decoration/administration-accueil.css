@@ -1,0 +1,71 @@
+@font-face {
+  font-family: balsamiq;
+  src: url(../ressources/font/Balsamiq.ttf);
+}
+
+h3{
+    font-size: 110%;
+    font-family: balsamiq;
+}
+
+.copyright{
+	text-align: center;
+	border: 3px solid black;
+	border-radius: 3px 3px 3px 3px;
+	text-align: center;
+}
+
+.magasiner-items-a-vendre{
+	display: flex;
+    width: 98%;
+    flex-wrap: wrap;
+    padding-top: 2.5em;
+    
+}
+
+.item{
+    margin-bottom: 2em;
+    width: 25%;
+    list-style: none;
+}
+
+.image-contenant{
+    min-height: 256px;
+    min-width: 256px;
+    max-width: 256px;
+    max-height: 256px;
+    border: 2px solid black;
+	border-radius: 1px 1px 1px 1px;
+}
+.image,.lien-image{
+    
+    margin-left: 0px;
+    max-width: inherit;
+    max-height: inherit;
+}
+.description{
+    font-size: 80%;
+    font-weight:500;
+    font-family: balsamiq;
+}
+
+.bouton-contenant{
+    font-family: balsamiq;
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5%;
+}
+
+.bouton{
+    font-family: balsamiq;
+    width: 50%;
+	height: 50%;
+	display: flex;
+	background-color: #ffff;
+    margin: 1%;
+    border: 2px solid black;
+    color: black;
+    box-shadow: 2px 2px 2px black;
+	justify-content: center;
+}

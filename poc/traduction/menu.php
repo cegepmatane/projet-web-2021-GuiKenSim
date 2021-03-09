@@ -23,7 +23,7 @@
     $domaine = "messages";
 
     if(!isset($_SESSION["langue"])){
-        $_SESSION["langue"] = "fr";
+        $_SESSION["langue"] = "en";
     }    
 
     if(isset($_POST["bouton_langue"])){        
@@ -58,7 +58,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-	<title> <?= gettext("Boutique du Cégep de Matane")?> </title>
+	<title> <?=_("Boutique du Cégep de Matane")?> </title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="./decoration/menu.css">
@@ -69,10 +69,10 @@
 	        <a href="index.php"><img src="./ressources/images/logo_cegep.png" alt="Logo Cégep Matane"/></a>	        
     	</div>
         <div class="menu-navigation">
-	         <a href="index.php" class="bouton-menu"> <?= gettext("Accueil")?> </a>
-	         <a href="magasiner.php" class="bouton-menu"> <?= gettext("Magasiner")?> </a>
+	         <a href="index.php" class="bouton-menu"> <?=_("Accueil")?> </a>
+	         <a href="magasiner.php" class="bouton-menu"> <?=_("Magasiner")?> </a>
              <?php echo $bouton_administration?>
-	         <a href="apropos.php" class="bouton-menu"> <?= gettext("À Propos de nous")?> </a>
+	         <a href="apropos.php" class="bouton-menu"> <?=_("À Propos de nous")?> </a>
              <?php echo $bouton_utilisateur ?>
              
              <form method="post"> 
