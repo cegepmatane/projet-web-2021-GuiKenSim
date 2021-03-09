@@ -14,7 +14,7 @@ if(empty($_SESSION['utilisateur'])){
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-	<title> Boutique du Cégep de Matane </title>
+	<title><?=_("Boutique du Cégep de Matane")?></title>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,7 +26,7 @@ if(empty($_SESSION['utilisateur'])){
 	<?php include 'menu.php' ?>
 
   	<div>
-  		<h1 class="magasiner_titre"> Liste des items à vendre </h1>
+  		<h1 class="magasiner_titre"><?=_("Liste des items à vendre")?></h1>
   	</div>
 
     <div class="barre-de-recherche-contenant">
@@ -47,7 +47,7 @@ if(empty($_SESSION['utilisateur'])){
                         </div>
                         
                         <h3 class="titre"><?=$produit->titre;?></h3>
-                        <span class="magasiner_description_item">n° article : <?=$produit->id;?> | Prix : <?=$produit->prix;?>$</span>
+                        <span class="magasiner_description_item"><?=_("n° article :")?><?=$produit->id;?> | <?=_("Prix :")?> <?=$produit->prix;?>$</span>
                         <form class="acheter-produit" action="paiement.php" method="POST" enctype="multipart/form-data">
                           <input type="hidden" name="titre" value="<?=$produit->titre;?>" />
                           <input type="hidden" name="prix" value="<?=$produit->prix;?>" />

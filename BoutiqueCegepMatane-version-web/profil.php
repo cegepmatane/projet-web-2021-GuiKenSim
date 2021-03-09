@@ -163,7 +163,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-	<title> Boutique du Cégep de Matane </title>
+	<title><?=_("Boutique du Cégep de Matane")?></title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./decoration/profil.css">
@@ -173,9 +173,9 @@
     <div class="conteneur-boites">
         <div class="boite-decoration">
             <form action="" class="page-profil-formulaire" method="post">
-                <h2>Modifier les informations de profil</h2>
+                <h2><?=_("Modifier les informations de profil")?></h2>
                 <label>
-                    Nom d'utilisateur:
+                    <?=_("Nom d'utilisateur:")?>
                 </label>
                 <input
                     type="text"
@@ -187,7 +187,7 @@
                     required=true
                 />
                 <label>
-                    Adresse courriel :
+                    <?=_("Adresse courriel :")?>
                 </label>
                 <input
                 name="courriel"
@@ -199,7 +199,7 @@
                 required=true
                 />
                 <label>
-                    Mot de passe :
+                    <?=_("Mot de passe :")?>
                 </label>
                 <input
                 name="motdepasse"
@@ -217,9 +217,9 @@
         
         <div class="boite-decoration">
             <form action="" class="page-profil-formulaire" method="post">
-                <h2>Changer le mot de passe</h2>
+                <h2><?=_("Changer le mot de passe")?></h2>
                 <label>
-                    Ancien mot de passe : 
+                    <?=_("Ancien mot de passe :")?>
                 </label>
                 <input
                     name="ancienMotDePasse"
@@ -230,7 +230,7 @@
                     required=true
                 />
                 <label>
-                    Nouveau mot de passe :
+                    <?=_("Nouveau mot de passe :")?>
                 </label>
                 <input
                 name="nouveauMotDePasse"
@@ -241,7 +241,7 @@
                 required=true
                 />
                 <label>
-                    Confirmer le mot de passe :
+                    <?=_("Confirmer le mot de passe :")?>
                 </label>
                 <input
                 name="confirmerNouveauMotDePasse"

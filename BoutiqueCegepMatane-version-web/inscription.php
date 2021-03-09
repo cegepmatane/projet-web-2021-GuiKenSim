@@ -85,7 +85,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-	<title> Boutique du Cégep de Matane </title>
+	<title><?=_("Boutique du Cégep de Matane")?></title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="./decoration/inscription.css">
@@ -95,11 +95,11 @@
 <body class="page-inscription">
 	<?php include 'menu.php' ?>
   	<div class="accueil">
-  		<h1 class="titre-page">Inscription à la boutique</h1>
+  		<h1 class="titre-page"><?=_("Inscription à la boutique")?></h1>
         <div class="boite-decoration">
             <form action="" class="page-inscription-formulaire" method="post">
                 <label>
-                    Nom d'utilisateur:
+                    <?=_("Nom d'utilisateur:")?>
                 </label>
                 <input
                     type="text"
@@ -111,7 +111,7 @@
                     required=true
                 />
                 <label>
-                    Adresse courriel :
+                    <?=_("Adresse courriel :")?>
                 </label>
                 <input
                 name="courriel"
@@ -123,7 +123,7 @@
                 required=true
                 />
                 <label>
-                    Mot de passe :
+                    <?=_("Mot de passe :")?>
                 </label>
                 <input
                 name="motdepasse"
@@ -133,7 +133,7 @@
                 required=true
                 />
                 <label>
-                    Vérifier le mot de passe :
+                    <?=_("Vérifier le mot de passe :")?>
                 </label>
                 <input
                 name="motdepasseVerif"

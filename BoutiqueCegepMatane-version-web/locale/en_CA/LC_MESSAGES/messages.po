@@ -1,0 +1,224 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2021-03-05 09:24-0500\n"
+"PO-Revision-Date: 2021-03-05 09:35-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_CA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.2\n"
+"X-Poedit-Basepath: ../../../..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __\n"
+"X-Poedit-SearchPath-0: apropos.php\n"
+"X-Poedit-SearchPath-1: connexion.php\n"
+"X-Poedit-SearchPath-2: detailler-produit.php\n"
+"X-Poedit-SearchPath-3: footer.php\n"
+"X-Poedit-SearchPath-4: historique-transaction.php\n"
+"X-Poedit-SearchPath-5: index.php\n"
+"X-Poedit-SearchPath-6: inscription.php\n"
+"X-Poedit-SearchPath-7: magasiner.php\n"
+"X-Poedit-SearchPath-8: menu.php\n"
+"X-Poedit-SearchPath-9: paiement.php\n"
+"X-Poedit-SearchPath-10: profil.php\n"
+
+#: apropos.php:4 connexion.php:76 detailler-produit.php:10 footer.php:4
+#: historique-transaction.php:12 index.php:4 inscription.php:88
+#: magasiner.php:17 menu.php:26 paiement.php:19 profil.php:166
+msgid "Boutique du Cégep de Matane"
+msgstr "Matane Cégep shop"
+
+#: apropos.php:14
+msgid "À propos de nous !"
+msgstr "About us !"
+
+#: apropos.php:16
+msgid ""
+"Nous sommes 3 étudiants en DEC Techniques de l'informatique au Cégep de "
+"Matane. Notre but ?"
+msgstr ""
+"We are 3 students in DEC Computer Technology at the Cégep de Matane. Our "
+"goal?"
+
+#: apropos.php:18
+msgid ""
+"Permettre aux nouveaux étudiants de s'équiper selon leurs besoins : chaque "
+"fois que l'on part du domicile familial\n"
+"  \t\tc'est un petit pincement au coeur ! Mais si l'on pouvait vous aider à "
+"vous sentir mieux chez vous, ne serait pas une bonne chose ? C'est pourquoi "
+"nous avons mis en oeuvre ce site."
+msgstr ""
+"Allowing new students to equip themselves according to their needs: every "
+"time they leave their family home\n"
+"  \t\tit's a little pinch in the heart! But if we could help you feel better "
+"at home, wouldn't it be a good thing? That's why we implemented this site."
+
+#: apropos.php:21
+msgid ""
+"Sur ce site vous trouverez aussi bien de quoi équiper votre chez vous que "
+"vous-même. Que ce soit une cafetière pour vous servir un bon café bien chaud "
+"lors des longues nuits d'hiver, ou bien un magnifique manteau du capitaine "
+"afin de défier les intempéries, ou encore une superbe serviette à l'effigie "
+"de votre école préférée. Nous avons quasiment tout ce dont vous pourriez "
+"avoir besoin pendant vos années d'études. Donc n'attendez plus et commander "
+"sur la boutique du Cégep de Matane !"
+msgstr ""
+"On this site you will find something to equip your home as well as yourself. "
+"Whether it's a coffee maker to serve you a nice hot coffee on long winter "
+"nights, or a beautiful captain's coat to defy the weather, or a beautiful "
+"towel bearing the image of your favorite school. We have almost everything "
+"you might need during your years of study. So don't wait any longer and "
+"order from the Cégep de Matane shop!"
+
+#: connexion.php:86
+msgid "Connexion à la boutique"
+msgstr "Connecting to the shop"
+
+#: connexion.php:90 inscription.php:102 profil.php:178
+msgid "Nom d'utilisateur:"
+msgstr "Username:"
+
+#: connexion.php:100 inscription.php:126 profil.php:202
+msgid "Mot de passe :"
+msgstr "Password:"
+
+#: connexion.php:109
+msgid "Nouveau client ? Cliquez-ici"
+msgstr "New customer? Click here"
+
+#: detailler-produit.php:25
+msgid "Descriptif du produit"
+msgstr "Product description"
+
+#: detailler-produit.php:27 magasiner.php:50
+msgid "Prix :"
+msgstr "Price :"
+
+#: footer.php:12
+msgid ""
+"© Tous droits réservés - Site développé par Kenny Marechal, Simon Delarue et "
+"Guillaume d'Albignac"
+msgstr ""
+"© All Rights Reserved - Site developed by Kenny Maréchal, Simon Delarue and "
+"Guillaume d'Albignac"
+
+#: historique-transaction.php:22
+msgid "Mon Historique de transaction"
+msgstr "My Transaction History"
+
+#: historique-transaction.php:25
+msgid "Mes Achats"
+msgstr "Mes purchases"
+
+#: historique-transaction.php:28
+msgid "Numéro de Commande"
+msgstr "Order number"
+
+#: historique-transaction.php:29
+msgid "Date de transaction"
+msgstr "Transaction date"
+
+#: historique-transaction.php:30
+msgid "Prix"
+msgstr "Price"
+
+#: historique-transaction.php:31
+msgid "Facture"
+msgstr "Bill"
+
+#: index.php:15
+msgid ""
+"Bienvenue sur la boutique en ligne du Cégep de Matane ! Cliquez sur "
+"MAGASINER pour commencer."
+msgstr "Welcome to Matane's Cegep online store ! Click SHOP to get started."
+
+#: index.php:16
+msgid "MAGASINER"
+msgstr "Shop"
+
+#: index.php:18 menu.php:40
+msgid "À Propos de nous"
+msgstr "About us"
+
+#: inscription.php:98
+msgid "Inscription à la boutique"
+msgstr "Connecting to the shop"
+
+#: inscription.php:114 profil.php:190
+msgid "Adresse courriel :"
+msgstr "Email :"
+
+#: inscription.php:136
+msgid "Vérifier le mot de passe :"
+msgstr "Verify password :"
+
+#: magasiner.php:29
+msgid "Liste des items à vendre"
+msgstr "List of items for sale"
+
+#: magasiner.php:50
+msgid "n° article :"
+msgstr "article n° :"
+
+#: menu.php:37
+msgid "Accueil"
+msgstr "Home"
+
+#: menu.php:38
+msgid "Magasiner"
+msgstr "Shop"
+
+#: paiement.php:31
+msgid "Commande"
+msgstr "Order"
+
+#: paiement.php:35
+msgid "Produit : "
+msgstr "Product : "
+
+#: paiement.php:36
+msgid "Prix : "
+msgstr "Price : "
+
+#: paiement.php:37
+msgid "Quantité :  1 "
+msgstr "Quantity : 1 "
+
+#: paiement.php:39
+msgid "Total TTC : "
+msgstr "Total Taxes Inc : "
+
+#: paiement.php:61
+msgid "Informations Client"
+msgstr "Customer informations"
+
+#: paiement.php:65
+msgid "Pseudo : "
+msgstr "Nickname : "
+
+#: paiement.php:66
+msgid "Courriel : "
+msgstr "Email : "
+
+#: profil.php:176
+msgid "Modifier les informations de profil"
+msgstr "Modify profil informations"
+
+#: profil.php:220
+msgid "Changer le mot de passe"
+msgstr "Change password"
+
+#: profil.php:222
+msgid "Ancien mot de passe :"
+msgstr "Old password :"
+
+#: profil.php:233
+msgid "Nouveau mot de passe :"
+msgstr "New password :"
+
+#: profil.php:244
+msgid "Confirmer le mot de passe :"
+msgstr "Confirme password :"

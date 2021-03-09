@@ -9,7 +9,7 @@ $listeTransaction = TransactionDAO::listerTransactionParPseudo($pseudoUtilisateu
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-	<title> Boutique du Cégep de Matane </title>
+	<title><?=_("Boutique du Cégep de Matane")?></title>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,16 +19,16 @@ $listeTransaction = TransactionDAO::listerTransactionParPseudo($pseudoUtilisateu
 
     <div class="contenu-page-transaction">
         <div class="contenu-titre">
-            <h1>Mon Historique de transaction</h1>
+            <h1><?=_("Mon Historique de transaction")?></h1>
         </div>
         <div class="contenu-tableau">
-            <h2>Mes Achats</h2>
+            <h2><?=_("Mes Achats")?></h2>
             <table class="tableau">
                 <tr class="titre-colonne">
-                    <th>Numéro de Commande</th>
-                    <th>Date de transaction</th>
-                    <th>Prix</th>
-                    <th>Facture</th>
+                    <th><?=_("Numéro de Commande")?></th>
+                    <th><?=_("Date de transaction")?></th>
+                    <th><?=_("Prix")?></th>
+                    <th><?=_("Facture")?></th>
                 </tr>
 
             <?php

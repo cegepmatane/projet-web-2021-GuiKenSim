@@ -73,7 +73,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-	<title> Boutique du Cégep de Matane </title>
+	<title><?=_("Boutique du Cégep de Matane")?></title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="./decoration/connexion.css">
@@ -83,11 +83,11 @@
 	<?php include 'menu.php' ?>
 
   	<div class="accueil">
-  		<h1 class="titre-page"> Connexion à la boutique </h1>
+  		<h1 class="titre-page"><?=_("Connexion à la boutique")?></h1>
         <div class="boite-decoration">
             <form action="" class="page-connexion-formulaire" method="post">
                 <label>
-                    Nom d'utilisateur:
+                    <?=_("Nom d'utilisateur:")?>
                 </label>
                 <input
                     type="text"
@@ -97,7 +97,7 @@
                     required=true
                 />
                 <label>
-                    Mot de passe :
+                    <?=_("Mot de passe :")?>
                 </label>
                 <input
                 name="motdepasse"
@@ -106,7 +106,7 @@
                 required=true
                 />
                 <p class="page-connexion-msgIncorrect"><?php echo $succes_connexion ?></p>
-                <a href="inscription.php" class="lien-inscription"> Nouveau client ? Cliquez-ici </a>
+                <a href="inscription.php" class="lien-inscription"><?=_("Nouveau client ? Cliquez-ici")?></a>
                 <input type="submit" value="Connexion" class="page-connexion-bouton" name="BoutonConnexion"/>
             </form>
             
